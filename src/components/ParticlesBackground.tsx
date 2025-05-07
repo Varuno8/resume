@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const ParticlesBackground: React.FC = () => {

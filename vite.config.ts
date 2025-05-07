@@ -18,5 +18,14 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    // Add dedupe to resolve conflicts between different versions of Three.js
+    dedupe: ['three', '@react-three/fiber', '@react-three/drei'],
+  },
+  // Add build options for Vercel deployment
+  build: {
+    commonjsOptions: {
+      // This helps with resolving dependencies that have mixed module formats
+      transformMixedEsModules: true,
+    },
   },
 }));
