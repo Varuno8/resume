@@ -38,7 +38,7 @@ const SocialLinks: React.FC = () => {
 
   const handleResumeClick = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1f4QU-YjlKnyKrluhPGdv-AMZqQhQMCp2/view?usp=sharing';
+    link.href = 'https://drive.google.com/file/d/1ahrwN-oIochekflh3x5vxn8SmRPMrAMZ/view?usp=drive_link';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
