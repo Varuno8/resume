@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
   }, []);
   
   const handleResumeClick = () => {
-    window.open('https://drive.google.com/file/d/1f4QU-YjlKnyKrluhPGdv-AMZqQhQMCp2/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1ahrwN-oIochekflh3x5vxn8SmRPMrAMZ/view?usp=drive_link', '_blank');
   };
   
   return (
