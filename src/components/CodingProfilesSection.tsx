@@ -16,8 +16,8 @@ interface CodingProfile {
 const codingProfiles: CodingProfile[] = [
     {
         name: "LeetCode",
-        username: "Varuno8",
-        url: "https://leetcode.com/Varuno8/",
+        username: "Varun_2",
+        url: "https://leetcode.com/Varun_2/",
         iconName: "LeetCode",
         rating: "1800+",
         solved: "500+ Problems",
@@ -66,51 +66,85 @@ const CodingProfilesSection: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Coding Profiles Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                {/* Desktop Grid View */}
+                <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {codingProfiles.map((profile, index) => (
                         <a
                             key={profile.name}
                             href={profile.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative p-4 sm:p-6 rounded-xl bg-white/5 border border-white/10 hover:border-neon-purple/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-purple flex flex-col items-center text-center"
+                            className="group relative p-6 rounded-xl bg-white/5 border border-white/10 hover:border-neon-purple/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-purple flex flex-col items-center text-center"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
-                            {/* Icon Background Glow */}
                             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-
-                            {/* Profile Icon */}
-                            <div className="relative mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-dark border border-white/10 group-hover:border-neon-purple/50 transition-colors">
-                                <TechIcon tech={profile.iconName} className="w-8 h-8 sm:w-10 sm:h-10" />
+                            <div className="relative mb-4 p-3 rounded-full bg-dark border border-white/10 group-hover:border-neon-purple/50 transition-colors">
+                                <TechIcon tech={profile.iconName} className="w-10 h-10" />
                             </div>
-
-                            {/* Profile Name */}
-                            <h3 className="text-lg sm:text-xl font-bold mb-1 group-hover:text-neon-purple transition-colors">{profile.name}</h3>
-                            <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">@{profile.username}</p>
-
-                            {/* Stats */}
-                            <div className="w-full space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
+                            <h3 className="text-xl font-bold mb-1 group-hover:text-neon-purple transition-colors">{profile.name}</h3>
+                            <p className="text-sm text-gray-400 mb-4">@{profile.username}</p>
+                            <div className="w-full space-y-2 mb-6">
                                 {profile.rating && (
-                                    <div className="flex justify-between items-center text-xs sm:text-sm">
+                                    <div className="flex justify-between items-center text-sm">
                                         <span className="text-gray-400">Rating</span>
                                         <span className="font-mono text-neon-cyan">{profile.rating}</span>
                                     </div>
                                 )}
                                 {profile.solved && (
-                                    <div className="flex justify-between items-center text-xs sm:text-sm">
+                                    <div className="flex justify-between items-center text-sm">
                                         <span className="text-gray-400">Solved</span>
                                         <span className="font-mono text-neon-teal">{profile.solved}</span>
                                     </div>
                                 )}
                             </div>
-
-                            {/* Description */}
-                            <p className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6 flex-grow">{profile.description}</p>
-
-                            {/* Link Button */}
-                            <div className="mt-auto flex items-center text-xs sm:text-sm font-medium text-neon-purple opacity-80 group-hover:opacity-100 transition-opacity">
+                            <p className="text-sm text-gray-300 mb-6 flex-grow">{profile.description}</p>
+                            <div className="mt-auto flex items-center text-sm font-medium text-neon-purple opacity-80 group-hover:opacity-100 transition-opacity">
                                 View Profile <ExternalLink className="ml-1 h-3 w-3" />
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                {/* Mobile Horizontal Scroll View */}
+                <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 -mx-4 px-4 scrollbar-hide">
+                    {codingProfiles.map((profile, index) => (
+                        <a
+                            key={profile.name}
+                            href={profile.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="snap-center flex-shrink-0 w-[85vw] p-5 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-md flex flex-col items-center text-center shadow-lg shadow-black/20 relative overflow-hidden"
+                        >
+                            {/* Decorative gradient blob */}
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-neon-purple/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-neon-cyan/20 rounded-full blur-2xl"></div>
+
+                            <div className="relative mb-3 p-3 rounded-full bg-dark/80 border border-white/10 shadow-inner">
+                                <TechIcon tech={profile.iconName} className="w-10 h-10" />
+                            </div>
+
+                            <h3 className="text-xl font-bold mb-1 text-white">{profile.name}</h3>
+                            <p className="text-sm text-gray-400 mb-4">@{profile.username}</p>
+
+                            <div className="w-full bg-black/20 rounded-lg p-3 mb-4 backdrop-blur-sm border border-white/5">
+                                {profile.rating && (
+                                    <div className="flex justify-between items-center text-sm mb-2">
+                                        <span className="text-gray-400">Rating</span>
+                                        <span className="font-mono text-neon-cyan font-bold">{profile.rating}</span>
+                                    </div>
+                                )}
+                                {profile.solved && (
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-gray-400">Solved</span>
+                                        <span className="font-mono text-neon-teal font-bold">{profile.solved}</span>
+                                    </div>
+                                )}
+                            </div>
+
+                            <p className="text-sm text-gray-300 mb-4 flex-grow leading-relaxed">{profile.description}</p>
+
+                            <div className="mt-auto w-full py-2 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sm font-medium text-neon-purple">
+                                View Profile <ExternalLink className="ml-2 h-3 w-3" />
                             </div>
                         </a>
                     ))}
