@@ -40,8 +40,8 @@ This portfolio website showcases my skills, projects, experience, and achievemen
 1. Clone the repository
 
 ```sh
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/Varuno8/resume.git
+cd resume
 ```
 
 2. Install NPM packages
@@ -91,7 +91,7 @@ This site is configured for deployment on Vercel. When deploying, make sure to:
 
 Varun Tyagi - [varun28082001@gmail.com](mailto:varun28082001@gmail.com)
 
-Project Link: [https://github.com/yourusername/portfolio](https://github.com/yourusername/portfolio)
+Project Link: [https://github.com/Varuno8/resume](https://github.com/Varuno8/resume)
 
 ## License
 
