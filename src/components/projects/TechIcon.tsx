@@ -75,7 +75,8 @@ const iconColor: Record<string, string> = {
   'VGG': '#007BFF',
   'ResNet': '#28A745',
   'EfficientNet': '#DC3545',
-  'RAG': '#6610F2'
+  'RAG': '#6610F2',
+  'CodeForces': '#1F8ACB',
 };
 
 // Technology logos mapping
@@ -117,6 +118,7 @@ const techLogos: Record<string, string> = {
   'Boto3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
   'Scikit-learn': 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
   'XGBoost': 'https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png',
+  'CodeForces': 'https://cdn.iconscout.com/icon/free/png-256/free-code-forces-3628695-3029920.png',
 };
 
 interface TechIconProps {
