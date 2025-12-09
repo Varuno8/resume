@@ -76,7 +76,7 @@ const Index: React.FC = () => {
   }, [isMobile]);
 
   return (
-    <div className="min-h-screen bg-dark text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden transition-colors duration-300">
       <ParticlesBackground />
       {showThreeD && !isMobile && <ThreeDBackground />}
       <Navbar />

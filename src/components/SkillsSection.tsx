@@ -123,14 +123,14 @@ const SkillsSection: React.FC = () => {
   }, [activeCategory]);
 
   return (
-    <section id="skills" className="section-padding relative overflow-hidden">
+    <section id="skills" className="section-padding relative overflow-hidden bg-card transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             Technical <span className="text-gradient">Skills</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             My toolkit for building innovative software solutions.
           </p>
         </div>

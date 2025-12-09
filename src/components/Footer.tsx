@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="pt-16 pb-8 bg-dark relative">
+    <footer className="pt-16 pb-8 bg-card transition-colors duration-300 relative">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Back to top button */}
         <div className="flex justify-center mb-8 sm:mb-12">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
           {/* Logo/Brand */}
           <div>
             <h2 className="font-display text-2xl font-bold text-gradient mb-4">Varun Tyagi</h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-muted-foreground mb-6">
               Full-stack engineer focused on building scalable software, intelligent systems,
               and delightful user experiences.
             </p>

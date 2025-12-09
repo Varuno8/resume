@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Menu, X, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Download, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/context/ThemeContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   // Handle scroll effect
   useEffect(() => {
@@ -40,7 +42,9 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-dark/80 backdrop-blur-lg py-3 shadow-md' : 'bg-transparent py-5'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-dark/80 dark:bg-dark/80 light:bg-white/80 backdrop-blur-lg py-3 shadow-md'
+        : 'bg-transparent py-5'
         }`}
     >
       <nav className="container mx-auto px-6 flex justify-between items-center">
@@ -65,6 +69,19 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center space-x-3">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <Sun className="h-4 w-4 text-yellow-400" />
+              ) : (
+                <Moon className="h-4 w-4 text-slate-700" />
+              )}
+            </button>
+
             {socialLinks.map((link) => (
               <a
                 key={link.label}
@@ -91,18 +108,33 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="md:hidden flex items-center space-x-2">
+          {/* Mobile Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? (
+              <Sun className="h-5 w-5 text-yellow-400" />
+            ) : (
+              <Moon className="h-5 w-5 text-slate-700" />
+            )}
+          </button>
+
+          <button
+            className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-dark/95 backdrop-blur-xl w-full absolute top-full left-0 shadow-lg animate-fade-in z-50">
+        <div className="md:hidden bg-dark/95 dark:bg-dark/95 backdrop-blur-xl w-full absolute top-full left-0 shadow-lg animate-fade-in z-50">
           <div className="container mx-auto px-6 py-6 flex flex-col">
             <ul className="flex flex-col space-y-4 mb-6">
               {navLinks.map((link) => (
