@@ -72,7 +72,8 @@
   }
 
   .neon-border {
-    @apply border border-neon-purple shadow-[0_0_15px_rgba(59, 130, 246, 0.5)];
+    @apply border border-neon-purple;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
   }
 
   .section-padding {
