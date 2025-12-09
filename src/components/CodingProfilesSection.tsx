@@ -67,38 +67,38 @@ const CodingProfilesSection: React.FC = () => {
                 </div>
 
                 {/* Coding Profiles Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                     {codingProfiles.map((profile, index) => (
                         <a
                             key={profile.name}
                             href={profile.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative p-6 rounded-xl bg-white/5 border border-white/10 hover:border-neon-purple/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-purple flex flex-col items-center text-center"
+                            className="group relative p-4 sm:p-6 rounded-xl bg-white/5 border border-white/10 hover:border-neon-purple/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-purple flex flex-col items-center text-center"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
                             {/* Icon Background Glow */}
                             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
 
                             {/* Profile Icon */}
-                            <div className="relative mb-4 p-3 rounded-full bg-dark border border-white/10 group-hover:border-neon-purple/50 transition-colors">
-                                <TechIcon tech={profile.iconName} />
+                            <div className="relative mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-dark border border-white/10 group-hover:border-neon-purple/50 transition-colors">
+                                <TechIcon tech={profile.iconName} className="w-8 h-8 sm:w-10 sm:h-10" />
                             </div>
 
                             {/* Profile Name */}
-                            <h3 className="text-xl font-bold mb-1 group-hover:text-neon-purple transition-colors">{profile.name}</h3>
-                            <p className="text-sm text-gray-400 mb-4">@{profile.username}</p>
+                            <h3 className="text-lg sm:text-xl font-bold mb-1 group-hover:text-neon-purple transition-colors">{profile.name}</h3>
+                            <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">@{profile.username}</p>
 
                             {/* Stats */}
-                            <div className="w-full space-y-2 mb-6">
+                            <div className="w-full space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
                                 {profile.rating && (
-                                    <div className="flex justify-between items-center text-sm">
+                                    <div className="flex justify-between items-center text-xs sm:text-sm">
                                         <span className="text-gray-400">Rating</span>
                                         <span className="font-mono text-neon-cyan">{profile.rating}</span>
                                     </div>
                                 )}
                                 {profile.solved && (
-                                    <div className="flex justify-between items-center text-sm">
+                                    <div className="flex justify-between items-center text-xs sm:text-sm">
                                         <span className="text-gray-400">Solved</span>
                                         <span className="font-mono text-neon-teal">{profile.solved}</span>
                                     </div>
@@ -106,10 +106,10 @@ const CodingProfilesSection: React.FC = () => {
                             </div>
 
                             {/* Description */}
-                            <p className="text-sm text-gray-300 mb-6 flex-grow">{profile.description}</p>
+                            <p className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6 flex-grow">{profile.description}</p>
 
                             {/* Link Button */}
-                            <div className="mt-auto flex items-center text-sm font-medium text-neon-purple opacity-80 group-hover:opacity-100 transition-opacity">
+                            <div className="mt-auto flex items-center text-xs sm:text-sm font-medium text-neon-purple opacity-80 group-hover:opacity-100 transition-opacity">
                                 View Profile <ExternalLink className="ml-1 h-3 w-3" />
                             </div>
                         </a>

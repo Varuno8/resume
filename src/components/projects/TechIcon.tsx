@@ -123,9 +123,10 @@ const techLogos: Record<string, string> = {
 
 interface TechIconProps {
   tech: string;
+  className?: string;
 }
 
-const TechIcon: React.FC<TechIconProps> = ({ tech }) => {
+const TechIcon: React.FC<TechIconProps> = ({ tech, className = "w-5 h-5" }) => {
   // Check if we have a logo for this technology
   const hasLogo = techLogos[tech] !== undefined;
 
@@ -135,13 +136,13 @@ const TechIcon: React.FC<TechIconProps> = ({ tech }) => {
         <img
           src={techLogos[tech]}
           alt={tech}
-          className="w-5 h-5 mr-1 rounded-sm"
+          className={`${className} mr-1 rounded-sm`}
           style={{ backgroundColor: tech === 'LeetCode' ? '#FFFFFF' : 'transparent' }}
         />
       ) : (
         // Fallback to colored circle if no logo is available
         <span
-          className="inline-flex items-center justify-center w-5 h-5 rounded-full mr-1"
+          className={`inline-flex items-center justify-center ${className} rounded-full mr-1`}
           style={{ backgroundColor: iconColor[tech] || '#6E6E6E' }}
           title={tech}
         />
