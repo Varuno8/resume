@@ -72,7 +72,7 @@
   }
   
   .neon-border {
-    @apply border border-neon-purple shadow-[0_0_15px_rgba(139,92,246,0.5)];
+    @apply border border-neon-purple shadow-[0_0_15px_rgba(59,130,246,0.5)];
   }
   
   .section-padding {
@@ -133,11 +133,11 @@
 
 @keyframes pulse-neon-3d {
   0%, 100% { 
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
     transform: scale(1) translateZ(0);
   }
   50% { 
-    box-shadow: 0 0 25px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4);
     transform: scale(1.05) translateZ(20px);
   }
 }
@@ -213,13 +213,13 @@
 
 @keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.3);
   }
   70% {
-    box-shadow: 0 0 0 20px rgba(139, 92, 246, 0);
+    box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
 }
 
@@ -290,15 +290,15 @@
   
   /* Professional shadow styles */
   .shadow-glow-purple {
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
   }
   
   .shadow-glow-cyan {
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
   }
   
   .shadow-glow-teal {
-    box-shadow: 0 0 15px rgba(6, 214, 160, 0.5);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
   }
 }
 

@@ -67,15 +67,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for portfolio
+				// Custom colors for portfolio - Premium Midnight Blue Theme
 				dark: {
-					DEFAULT: '#0F1322',
-					lighter: '#1A1F2C',
+					DEFAULT: '#020617', // Slate 950
+					lighter: '#0f172a', // Slate 900
 				},
 				neon: {
-					cyan: '#00E5FF',
-					purple: '#8B5CF6',
-					teal: '#06D6A0',
+					cyan: '#38bdf8',   // Sky 400
+					purple: '#3b82f6', // Blue 500
+					teal: '#0ea5e9',   // Sky 500
 				},
 			},
 			borderRadius: {
@@ -97,11 +97,11 @@ export default {
 					'50%': { transform: 'translateY(-10px)' },
 				},
 				'pulse-neon': {
-					'0%, 100%': { 
+					'0%, 100%': {
 						boxShadow: '0 0 15px rgba(139, 92, 246, 0.6)',
 						transform: 'scale(1)'
 					},
-					'50%': { 
+					'50%': {
 						boxShadow: '0 0 25px rgba(139, 92, 246, 0.8)',
 						transform: 'scale(1.02)'
 					},

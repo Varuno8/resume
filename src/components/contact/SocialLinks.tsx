@@ -13,24 +13,24 @@ type SocialLinkType = {
 
 const SocialLinks: React.FC = () => {
   const socialLinks: SocialLinkType[] = [
-    { 
-      name: 'GitHub', 
-      icon: <Github className="h-6 w-6" />, 
+    {
+      name: 'GitHub',
+      icon: <Github className="h-6 w-6" />,
       url: 'https://github.com/Varuno8',
       color: 'bg-[#24292e] hover:bg-[#2b3137]',
       username: 'Varuno8'
     },
-    { 
-      name: 'LinkedIn', 
-      icon: <Linkedin className="h-6 w-6" />, 
+    {
+      name: 'LinkedIn',
+      icon: <Linkedin className="h-6 w-6" />,
       url: 'https://www.linkedin.com/in/varun-tyagi-32bb281b9/',
       color: 'bg-[#0077B5] hover:bg-[#0077B5]/90',
       username: 'varun-tyagi-32bb281b9'
     },
-    { 
-      name: 'Email', 
-      icon: <Mail className="h-6 w-6" />, 
-      url: 'https://mail.google.com/mail/?view=cm&fs=1&to=varun28082001@gmail.com&su=Hello',
+    {
+      name: 'Email',
+      icon: <Mail className="h-6 w-6" />,
+      url: 'mailto:varun28082001@gmail.com',
       color: 'bg-neon-purple hover:bg-neon-purple/90',
       username: 'varun28082001@gmail.com'
     },
@@ -49,15 +49,15 @@ const SocialLinks: React.FC = () => {
   return (
     <div className="glass-card rounded-xl p-6 md:p-8 mb-6 md:mb-8">
       <h3 className="text-2xl font-display font-semibold mb-6">Connect With Me</h3>
-      
+
       <div className="space-y-4">
         {/* Social links */}
         <div className="flex flex-col space-y-3">
           {socialLinks.map((social) => (
-            <a 
-              key={social.name} 
-              href={social.url} 
-              target="_blank" 
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center p-3 rounded-lg ${social.color} text-white transition-transform hover:scale-102`}
             >
@@ -73,9 +73,9 @@ const SocialLinks: React.FC = () => {
             </a>
           ))}
         </div>
-        
+
         {/* Resume Download Button */}
-        <Button 
+        <Button
           onClick={handleResumeClick}
           className="w-full bg-gradient-to-r from-neon-purple to-neon-cyan flex items-center justify-center"
         >

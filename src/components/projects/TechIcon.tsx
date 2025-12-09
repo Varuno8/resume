@@ -75,11 +75,7 @@ const iconColor: Record<string, string> = {
   'VGG': '#007BFF',
   'ResNet': '#28A745',
   'EfficientNet': '#DC3545',
-  'LLaMA': '#6F42C1',
-  'Gemma': '#20C997',
-  'Qwen2-VL-2B': '#0DCAF0',
-  'RAG': '#6610F2',
-  'Document AI': '#D63384',
+  'RAG': '#6610F2'
 };
 
 // Technology logos mapping
@@ -130,19 +126,19 @@ interface TechIconProps {
 const TechIcon: React.FC<TechIconProps> = ({ tech }) => {
   // Check if we have a logo for this technology
   const hasLogo = techLogos[tech] !== undefined;
-  
+
   return (
     <>
       {hasLogo ? (
-        <img 
-          src={techLogos[tech]} 
+        <img
+          src={techLogos[tech]}
           alt={tech}
           className="w-5 h-5 mr-1 rounded-sm"
           style={{ backgroundColor: tech === 'LeetCode' ? '#FFFFFF' : 'transparent' }}
         />
       ) : (
         // Fallback to colored circle if no logo is available
-        <span 
+        <span
           className="inline-flex items-center justify-center w-5 h-5 rounded-full mr-1"
           style={{ backgroundColor: iconColor[tech] || '#6E6E6E' }}
           title={tech}

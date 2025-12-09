@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
       behavior: 'smooth'
     });
   };
-  
+
   const socialLinks = [
     { icon: <Github className="h-4 w-4" />, href: 'https://github.com/Varuno8', label: 'GitHub' },
     { icon: <Linkedin className="h-4 w-4" />, href: 'https://www.linkedin.com/in/varun-tyagi-32bb281b9/', label: 'LinkedIn' },
-    { icon: <Mail className="h-4 w-4" />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=varun28082001@gmail.com&su=Hello', label: 'Email' },
+    { icon: <Mail className="h-4 w-4" />, href: 'mailto:varun28082001@gmail.com', label: 'Email' },
   ];
-  
+
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Projects', href: '#projects' },
@@ -25,30 +25,30 @@ const Footer: React.FC = () => {
     { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' },
   ];
-  
+
   return (
     <footer className="pt-16 pb-8 bg-dark relative">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Back to top button */}
         <div className="flex justify-center mb-8 sm:mb-12">
-          <button 
-            onClick={handleScrollToTop} 
+          <button
+            onClick={handleScrollToTop}
             className="p-3 rounded-full bg-neon-purple text-white hover:bg-neon-purple/90 transition-all hover:scale-110"
             aria-label="Back to top"
           >
             <ArrowUp className="h-5 w-5" />
           </button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Logo/Brand */}
           <div>
             <h2 className="font-display text-2xl font-bold text-gradient mb-4">Varun Tyagi</h2>
             <p className="text-gray-300 mb-6">
-              Full-stack engineer focused on building scalable software, intelligent systems, 
+              Full-stack engineer focused on building scalable software, intelligent systems,
               and delightful user experiences.
             </p>
-            
+
             {/* Social links - Updated with better visibility */}
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
@@ -65,15 +65,15 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Quick links - Display in 2 columns on mobile */}
           <div className="md:col-span-1">
             <h3 className="font-display text-lg font-medium mb-4">Quick Links</h3>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <a
+                    href={link.href}
                     className="text-gray-300 hover:text-neon-purple transition-colors"
                   >
                     {link.name}
@@ -83,12 +83,12 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Copyright */}
         <div className="border-t border-white/10 pt-6 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Varun Tyagi. All rights reserved.</p>
           <p className="mt-1">
-            Designed & Developed with 
+            Designed & Developed with
             <span className="text-red-500 mx-1">❤</span>
           </p>
         </div>

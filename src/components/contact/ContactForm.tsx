@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Send } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
-import { 
+import {
   Select,
   SelectContent,
   SelectItem,
@@ -22,7 +22,7 @@ type FormState = {
 
 // EmailJS credentials
 const EMAILJS_SERVICE_ID = 'service_73rdyye';
-const EMAILJS_TEMPLATE_ID = 'template_zrozi0g'; 
+const EMAILJS_TEMPLATE_ID = 'template_zrozi0g';
 const EMAILJS_PUBLIC_KEY = 'aFogwa3XEk2l6FHDg';
 
 const ContactForm: React.FC = () => {
@@ -33,9 +33,9 @@ const ContactForm: React.FC = () => {
     subject: 'Job Opportunity',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState(prev => ({ ...prev, [name]: value }));
@@ -44,15 +44,15 @@ const ContactForm: React.FC = () => {
   const handleSubjectChange = (value: string) => {
     setFormState(prev => ({ ...prev, subject: value }));
   };
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Initialize EmailJS with public key
       emailjs.init(EMAILJS_PUBLIC_KEY);
-      
+
       // Prepare template parameters according to your EmailJS template variables
       const templateParams = {
         from_name: formState.name,
@@ -60,32 +60,32 @@ const ContactForm: React.FC = () => {
         subject: formState.subject,
         message: formState.message,
       };
-      
+
       console.log('Sending email with params:', templateParams);
-      
+
       // Send email using EmailJS
       const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams
       );
-      
+
       console.log('Email sent successfully:', result);
       toast.success("Message sent successfully! I'll get back to you soon.");
       setFormState({ name: '', email: '', subject: 'Job Opportunity', message: '' });
     } catch (error) {
       console.error('Email sending failed:', error);
-      
+
       // Create mailto link as a fallback when EmailJS fails
-      const mailToLink = `https://mail.google.com/mail/u/0/?fs=1&to=varun28082001@gmail.com&su=${encodeURIComponent(formState.subject)}&body=${encodeURIComponent(`From: ${formState.name} (${formState.email})\n\n${formState.message}`)}`;
-      
+      const mailToLink = `mailto:varun28082001@gmail.com?subject=${encodeURIComponent(formState.subject)}&body=${encodeURIComponent(`From: ${formState.name} (${formState.email})\n\n${formState.message}`)}`;
+
       window.open(mailToLink, '_blank');
       toast.error("Failed to send message directly. Opening email client as a fallback.");
     } finally {
       setIsSubmitting(false);
     }
   };
-  
+
   const subjectOptions = [
     { value: 'Job Opportunity', label: 'Job Opportunity' },
     { value: 'Freelance', label: 'Freelance' },
@@ -96,7 +96,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="glass-card rounded-xl p-6 md:p-8">
       <h3 className="text-2xl font-display font-semibold mb-6">Send a Message</h3>
-      
+
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -112,7 +112,7 @@ const ContactForm: React.FC = () => {
             required
           />
         </div>
-        
+
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-2">
             Email
@@ -128,13 +128,13 @@ const ContactForm: React.FC = () => {
             required
           />
         </div>
-        
+
         <div>
           <label htmlFor="subject" className="block text-sm font-medium mb-2">
             Subject
           </label>
-          <Select 
-            value={formState.subject} 
+          <Select
+            value={formState.subject}
             onValueChange={handleSubjectChange}
           >
             <SelectTrigger className="bg-white/5 border-white/20">
@@ -149,7 +149,7 @@ const ContactForm: React.FC = () => {
             </SelectContent>
           </Select>
         </div>
-        
+
         <div>
           <label htmlFor="message" className="block text-sm font-medium mb-2">
             Message
@@ -164,9 +164,9 @@ const ContactForm: React.FC = () => {
             required
           />
         </div>
-        
-        <Button 
-          type="submit" 
+
+        <Button
+          type="submit"
           className="w-full bg-gradient-to-r from-neon-purple to-neon-cyan"
           disabled={isSubmitting}
         >
