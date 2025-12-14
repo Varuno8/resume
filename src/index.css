@@ -362,6 +362,10 @@
     animation: gradient-shift 3s ease infinite;
   }
 
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   /* Professional shadow styles */
   .shadow-glow-emerald {
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
