@@ -67,15 +67,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for portfolio - Premium Midnight Blue Theme
-				dark: {
-					DEFAULT: '#020617', // Slate 950
-					lighter: '#0f172a', // Slate 900
-				},
-				neon: {
-					cyan: '#38bdf8',   // Sky 400
-					purple: '#3b82f6', // Blue 500
-					teal: '#0ea5e9',   // Sky 500
+				// Custom premium colors - Distinct from generic AI themes
+				premium: {
+					slate: '#0f172a', // Slate 900
+					emerald: '#10b981', // Emerald 500
+					amber: '#f59e0b',   // Amber 500
+					white: '#f8fafc',   // Slate 50
 				},
 			},
 			borderRadius: {

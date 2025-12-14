@@ -49,7 +49,7 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo/Name */}
-        <a href="#home" className="font-display text-xl font-bold text-gradient">
+        <a href="#home" className="font-display text-xl font-bold premium-gradient-text">
           VT
         </a>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-sm hover:text-neon-purple transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-neon-purple hover:after:w-full after:transition-all"
+                  className="text-sm hover:text-premium-emerald transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-premium-emerald hover:after:w-full after:transition-all"
                 >
                   {link.name}
                 </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="h-4 w-4 text-yellow-400" />
+                <Sun className="h-4 w-4 text-premium-amber" />
               ) : (
                 <Moon className="h-4 w-4 text-slate-700" />
               )}
@@ -98,7 +98,7 @@ const Navbar = () => {
             <Button
               variant="default"
               size="sm"
-              className="bg-gradient-to-r from-neon-purple to-neon-cyan text-white"
+              className="bg-premium-emerald text-white hover:bg-premium-emerald/90"
               onClick={handleResumeClick}
             >
               <Download className="h-4 w-4 mr-1" />
@@ -116,7 +116,7 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? (
-              <Sun className="h-5 w-5 text-yellow-400" />
+              <Sun className="h-5 w-5 text-premium-amber" />
             ) : (
               <Moon className="h-5 w-5 text-slate-700" />
             )}
@@ -134,14 +134,14 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-dark/95 dark:bg-dark/95 backdrop-blur-xl w-full absolute top-full left-0 shadow-lg animate-fade-in z-50">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl w-full absolute top-full left-0 shadow-lg animate-fade-in z-50 border-b border-white/10">
           <div className="container mx-auto px-6 py-6 flex flex-col">
             <ul className="flex flex-col space-y-4 mb-6">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-base hover:text-neon-purple transition-colors"
+                    className="text-base hover:text-premium-emerald transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
@@ -167,7 +167,7 @@ const Navbar = () => {
               <Button
                 variant="default"
                 size="sm"
-                className="bg-gradient-to-r from-neon-purple to-neon-cyan text-white ml-auto"
+                className="bg-premium-emerald text-white ml-auto"
                 onClick={handleResumeClick}
               >
                 <Download className="h-4 w-4 mr-1" />

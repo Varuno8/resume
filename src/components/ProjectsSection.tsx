@@ -47,7 +47,7 @@ const ProjectsSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Featured <span className="text-gradient">Projects</span>
+            Featured <span className="premium-gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Explore my recent work spanning web development, AI integration, and data processing.
@@ -74,7 +74,7 @@ const ProjectsSection: React.FC = () => {
               onClick={handleLoadMore}
               variant="outline"
               size="lg"
-              className="border-neon-purple hover:bg-neon-purple/10"
+              className="border-premium-emerald text-premium-emerald hover:bg-premium-emerald/10"
             >
               Load More Projects
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -84,8 +84,8 @@ const ProjectsSection: React.FC = () => {
       </div>
 
       {/* Background glow effects */}
-      <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-neon-purple/20 rounded-full filter blur-3xl"></div>
-      <div className="absolute top-1/3 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-neon-cyan/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-premium-emerald/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-1/3 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
     </section>
   );
 };

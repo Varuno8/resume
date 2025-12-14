@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
 
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-neon-purple to-neon-cyan"
+          className="w-full bg-premium-emerald hover:bg-premium-emerald/90 text-white font-medium shadow-lg shadow-premium-emerald/20 transition-all duration-300 transform hover:scale-[1.02]"
           disabled={isSubmitting}
         >
           {isSubmitting ? (

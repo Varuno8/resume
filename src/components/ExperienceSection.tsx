@@ -22,7 +22,7 @@ const experiences: Experience[] = [
       "Created secure subscription systems, analytics dashboards, and an AI model catalog",
       "Implemented JWT-based authentication with Google OAuth, Tailwind UI, and Recharts visualizations"
     ],
-    color: "#8B5CF6" // purple
+    color: "#10b981" // emerald
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const experiences: Experience[] = [
       "Developed responsive UI components and implemented state management patterns",
       "Collaborated with UX team to create intuitive user flows and interactions"
     ],
-    color: "#00E5FF" // cyan
+    color: "#f59e0b" // amber
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const experiences: Experience[] = [
       "Optimized web assets and implemented best practices for performance improvements",
       "Created cross-browser compatible solutions for client websites"
     ],
-    color: "#06D6A0" // teal
+    color: "#f8fafc" // white/slate-50
   }
 ];
 
@@ -91,7 +91,7 @@ const ExperienceSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Work <span className="text-gradient">Experience</span>
+            Work <span className="premium-gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Professional journey and roles that have shaped my expertise.
@@ -101,11 +101,11 @@ const ExperienceSection: React.FC = () => {
         {/* Timeline */}
         <div ref={timelineRef} className="max-w-4xl mx-auto relative">
           {/* Timeline line with animated elements */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-neon-purple via-neon-cyan to-neon-teal">
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-premium-emerald via-premium-white to-premium-amber">
             {/* Timeline Nodes */}
-            <div className="hidden md:block absolute top-[10%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-neon-purple animate-pulse-slow shadow-glow-purple"></div>
-            <div className="hidden md:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-neon-cyan animate-pulse-slow shadow-glow-cyan"></div>
-            <div className="hidden md:block absolute top-[90%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-neon-teal animate-pulse-slow shadow-glow-teal"></div>
+            <div className="hidden md:block absolute top-[10%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-premium-emerald animate-pulse-slow shadow-glow-emerald"></div>
+            <div className="hidden md:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-premium-amber animate-pulse-slow shadow-glow-amber"></div>
+            <div className="hidden md:block absolute top-[90%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white animate-pulse-slow shadow-glow-white"></div>
           </div>
 
           {/* Experience cards */}
@@ -174,7 +174,7 @@ const ExperienceSection: React.FC = () => {
 
                 <ul className={`space-y-2 text-muted-foreground ${index % 2 === 0 ? 'md:ml-auto' : ''
                   }`}>
-                  {experience.highlights.map((highlight, i) => (
+                  {experiences[index].highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start">
                       <Star
                         className="h-4 w-4 mr-2 mt-1 shrink-0"
@@ -199,7 +199,7 @@ const ExperienceSection: React.FC = () => {
           </p>
           <a
             href="#skills"
-            className="inline-flex items-center text-neon-cyan hover:underline"
+            className="inline-flex items-center text-premium-emerald hover:underline"
           >
             Check out my skills
             <ArrowRight className="ml-1 h-4 w-4" />
@@ -208,8 +208,8 @@ const ExperienceSection: React.FC = () => {
       </div>
 
       {/* Background elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-neon-purple/10 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-neon-cyan/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
     </section>
   );
 };

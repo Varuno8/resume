@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
         <div className="flex justify-center mb-8 sm:mb-12">
           <button
             onClick={handleScrollToTop}
-            className="p-3 rounded-full bg-neon-purple text-white hover:bg-neon-purple/90 transition-all hover:scale-110"
+            className="p-3 rounded-full bg-premium-emerald text-white hover:bg-premium-emerald/90 transition-all hover:scale-110 shadow-lg shadow-premium-emerald/30"
             aria-label="Back to top"
           >
             <ArrowUp className="h-5 w-5" />
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Logo/Brand */}
           <div>
-            <h2 className="font-display text-2xl font-bold text-gradient mb-4">Varun Tyagi</h2>
+            <h2 className="font-display text-2xl font-bold premium-gradient-text mb-4">Varun Tyagi</h2>
             <p className="text-muted-foreground mb-6">
               Full-stack engineer focused on building scalable software, intelligent systems,
               and delightful user experiences.
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2 rounded-full bg-dark-lighter text-neon-cyan hover:bg-neon-purple/20 transition-colors"
+                  className="p-2 rounded-full bg-white/5 text-premium-emerald hover:bg-premium-emerald/10 transition-colors border border-white/5"
                 >
                   {link.icon}
                 </a>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-neon-purple transition-colors"
+                    className="text-muted-foreground hover:text-premium-emerald transition-colors"
                   >
                     {link.name}
                   </a>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/10 pt-6 text-center text-sm text-gray-400">
+        <div className="border-t border-white/10 pt-6 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Varun Tyagi. All rights reserved.</p>
           <p className="mt-1">
             Designed & Developed with

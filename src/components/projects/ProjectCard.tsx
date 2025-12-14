@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
   return (
     <div
       ref={cardRef}
-      className={`glass-card rounded-xl overflow-hidden transition-all duration-500 ${isHovered ? 'neon-border z-10' : ''
+      className={`glass-card rounded-xl overflow-hidden transition-all duration-500 ${isHovered ? 'border-premium-emerald/50 z-10' : ''
         }`}
       onMouseEnter={onHover}
       onMouseLeave={() => { }}
@@ -121,7 +121,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
           <Button
             variant="ghost"
             size="sm"
-            className="group text-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/10"
+            className="group text-premium-emerald hover:text-premium-emerald hover:bg-premium-emerald/10"
             style={{ transform: isHovered ? 'translateZ(60px)' : 'translateZ(0)', transformStyle: 'preserve-3d' }}
             onClick={() => window.open(project.demoUrl, '_blank')}
           >

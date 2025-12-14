@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Let's <span className="text-gradient">Build Together</span>
+            Let's <span className="premium-gradient-text">Build Together</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto px-4">
             Have a project in mind or want to collaborate? Reach out and let's create something amazing.

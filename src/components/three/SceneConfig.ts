@@ -14,8 +14,9 @@ export const spherePositions: [number, number, number][] = [
 ];
 
 // Color constants for consistent styling
+// Color constants for consistent styling - Premium Emerald Theme
 export const colors = {
-  purple: "#8B5CF6",
-  cyan: "#00E5FF",
-  teal: "#06D6A0"
+  purple: "#10b981", // Replaced with Emerald
+  cyan: "#f59e0b",   // Replaced with Amber
+  teal: "#f8fafc"    // Replaced with Slate-50/White
 };

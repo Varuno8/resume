@@ -7,7 +7,7 @@ export const achievements: Achievement[] = [
     title: "GFG Problems",
     value: "320+",
     iconName: "Code",
-    color: "neon-cyan",
+    color: "premium-emerald",
     numericValue: 320,
     tech: "GeeksforGeeks",
     url: "https://www.geeksforgeeks.org/user/varun28y2a4/"
@@ -17,7 +17,7 @@ export const achievements: Achievement[] = [
     title: "LeetCode",
     value: "250+",
     iconName: "Star",
-    color: "neon-purple",
+    color: "premium-amber",
     numericValue: 250,
     tech: "LeetCode",
     url: "https://leetcode.com/u/Varun_2/"
@@ -27,7 +27,7 @@ export const achievements: Achievement[] = [
     title: "CodeChef Rating",
     value: "1500",
     iconName: "Award",
-    color: "neon-teal",
+    color: "premium-emerald",
     numericValue: 1500,
     tech: "CodeChef",
     url: "https://www.codechef.com/users/varun28082001"
@@ -37,7 +37,7 @@ export const achievements: Achievement[] = [
     title: "JEE Mains",
     value: "98.2 percentile",
     iconName: "Award",
-    color: "neon-purple",
+    color: "premium-amber",
     numericValue: 98
   }
 ];

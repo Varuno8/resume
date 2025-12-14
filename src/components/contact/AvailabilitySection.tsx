@@ -13,11 +13,11 @@ const AvailabilitySection: React.FC = () => {
         <span className="skill-tag">Contract</span>
         <span className="skill-tag">Full-time</span>
       </div>
-      
+
       <h3 className="font-display text-lg font-medium mt-6 mb-3">Get In Touch</h3>
-      <a 
+      <a
         href="https://mail.google.com/mail/?view=cm&fs=1&to=varun28082001@gmail.com&su=Hello"
-        className="text-neon-cyan hover:underline block mb-3"
+        className="text-premium-emerald hover:underline block mb-3"
         target="_blank"
         rel="noopener noreferrer"
       >

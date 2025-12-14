@@ -48,30 +48,30 @@ const HeroSection: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center">
           {/* Profile image with glow effect */}
           <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-teal opacity-50 blur-md animate-pulse-slow"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-premium-emerald via-premium-white to-premium-amber opacity-30 blur-md animate-pulse-slow"></div>
             <img
-              src="https://placehold.co/300x300/1A1F2C/FFFFFF?text=VT"
+              src="https://placehold.co/300x300/0f172a/FFFFFF?text=VT"
               alt="Profile"
               className="w-full h-full object-cover rounded-full border-2 border-white/20"
             />
           </div>
 
           {/* Pre-heading text with animated fade-in */}
-          <p className="text-neon-cyan font-mono mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-premium-emerald font-mono mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             Hello, I'm
           </p>
 
           {/* Name with gradient and 3D effect */}
           <h1 className="font-display text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-in relative" style={{ animationDelay: '0.7s' }}>
-            <span className="text-gradient relative z-10 leading-tight tracking-tight">Varun Tyagi</span>
+            <span className="premium-gradient-text relative z-10 leading-tight tracking-tight">Varun Tyagi</span>
             {/* Text shadow for 3D effect */}
-            <span className="absolute -left-1 top-1 text-neon-purple/20 z-0 hidden md:block">Varun Tyagi</span>
+            <span className="absolute -left-1 top-1 text-white/5 z-0 hidden md:block">Varun Tyagi</span>
           </h1>
 
           {/* Professional title badge */}
           <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4 sm:mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <span className="h-2 w-2 rounded-full bg-neon-cyan mr-2 animate-pulse"></span>
-            <span className="text-neon-cyan text-sm sm:text-base font-medium">Full-Stack Developer</span>
+            <span className="h-2 w-2 rounded-full bg-premium-amber mr-2 animate-pulse"></span>
+            <span className="text-premium-emerald text-sm sm:text-base font-medium">Full-Stack Developer</span>
           </div>
 
           {/* Tagline with typing effect - improved sizing for mobile */}
@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
           </h2>
 
           {/* Subtext with improved professional tone and wrapping on mobile */}
-          <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 sm:mb-10 opacity-0 animate-fade-in leading-relaxed" style={{ animationDelay: '1.4s' }}>
+          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto mb-8 sm:mb-10 opacity-0 animate-fade-in leading-relaxed" style={{ animationDelay: '1.4s' }}>
             Specialized in developing scalable applications, intelligent systems, and
             immersive digital experiences with modern technologies and best practices.
           </p>
@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
             <Button
               variant="default"
               size={isMobile ? "default" : "lg"}
-              className="group w-full sm:w-auto bg-gradient-to-r from-neon-purple to-neon-cyan text-white transition-all duration-300 shadow-md hover:shadow-glow-purple"
+              className="group w-full sm:w-auto bg-premium-emerald text-white hover:bg-premium-emerald/90 transition-all duration-300 shadow-lg shadow-premium-emerald/20"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Projects
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
             <Button
               variant="outline"
               size={isMobile ? "default" : "lg"}
-              className="group w-full sm:w-auto border-neon-cyan hover:bg-neon-cyan/10 transition-all duration-300"
+              className="group w-full sm:w-auto border-white/10 hover:bg-white/5 text-foreground transition-all duration-300"
               onClick={handleResumeClick}
             >
               Download Resume
@@ -146,8 +146,8 @@ const HeroSection: React.FC = () => {
           <div className="absolute bottom-8 sm:bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s' }}>
             <div className="flex flex-col items-center">
               <div className="relative h-12 sm:h-16 w-1">
-                <div className="absolute w-[3px] h-12 sm:h-16 rounded-full bg-gradient-to-b from-neon-purple to-transparent"></div>
-                <div className="absolute w-[3px] h-4 sm:h-5 bg-neon-purple rounded-full animate-bounce-slow"></div>
+                <div className="absolute w-[3px] h-12 sm:h-16 rounded-full bg-gradient-to-b from-premium-emerald to-transparent"></div>
+                <div className="absolute w-[3px] h-4 sm:h-5 bg-premium-emerald rounded-full animate-bounce-slow"></div>
               </div>
             </div>
           </div>

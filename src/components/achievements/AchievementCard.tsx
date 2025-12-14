@@ -18,19 +18,19 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
       rootMargin: '0px',
       threshold: 0.1
     };
-    
+
     const animateCounter = (element: HTMLElement, target: number) => {
       const duration = 2000;
       const frameRate = 60;
       const frameDuration = 1000 / frameRate;
       const totalFrames = Math.round(duration / frameDuration);
       let frame = 0;
-      
+
       const counter = setInterval(() => {
         frame++;
         const progress = frame / totalFrames;
         const currentCount = Math.floor(progress * target);
-        
+
         if (frame === totalFrames) {
           clearInterval(counter);
           element.textContent = target.toString();
@@ -39,25 +39,25 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
         }
       }, frameDuration);
     };
-    
+
     const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const counterElement = entry.target as HTMLElement;
           const target = parseInt(counterElement.dataset.target || '0', 10);
-          
+
           animateCounter(counterElement, target);
           observer.unobserve(entry.target);
         }
       });
     };
-    
+
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    
+
     if (counterRef.current && !isNaN(parseInt(counterRef.current.dataset.target || '0', 10))) {
       observer.observe(counterRef.current);
     }
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -74,8 +74,8 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
   };
 
   return (
-    <div 
-      className="glass-card rounded-xl p-6 text-center transition-all duration-300 hover:shadow-xl"
+    <div
+      className="glass-card rounded-xl p-6 text-center transition-all duration-300 hover:shadow-xl hover:shadow-premium-emerald/10 border border-white/5"
       style={{
         transformStyle: 'preserve-3d',
         transform: 'perspective(1000px)',
@@ -95,38 +95,43 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
         e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
       }}
     >
-      <a 
-        href={achievement.url} 
-        target="_blank" 
+      <a
+        href={achievement.url}
+        target="_blank"
         rel="noopener noreferrer"
-        className={achievement.url ? "block" : ""}
+        className={achievement.url ? "block group" : "group"}
       >
-        <div 
-          className={`h-16 w-16 rounded-full bg-${achievement.color}/20 flex items-center justify-center mx-auto mb-4 text-${achievement.color} shadow-lg`}
-          style={{boxShadow: `0 0 15px var(--${achievement.color})`}}
+        <div
+          className={`h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110 ${achievement.color === 'premium-amber'
+              ? 'bg-premium-amber/20 text-premium-amber shadow-premium-amber/20'
+              : 'bg-premium-emerald/20 text-premium-emerald shadow-premium-emerald/20'
+            }`}
         >
           {renderIcon()}
         </div>
-        
+
         <div className="mb-2">
-          <span 
-            ref={counterRef} 
-            className={`text-3xl font-display font-bold text-${achievement.color}`}
+          <span
+            ref={counterRef}
+            className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
+              }`}
             data-target={achievement.numericValue}
           >
             0
           </span>
-          <span className={`text-3xl font-display font-bold text-${achievement.color}`}>
+          <span className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
+            }`}>
             {achievement.value.includes('+') ? '+' : achievement.value.includes('%') ? '%' : ''}
           </span>
-          {achievement.id === 4 && 
-            <span className={`text-3xl font-display font-bold text-${achievement.color}`}>
+          {achievement.id === 4 &&
+            <span className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
+              }`}>
               {' percentile'}
             </span>
           }
         </div>
-        
-        <h3 className="text-lg font-medium">{achievement.title}</h3>
+
+        <h3 className="text-lg font-medium text-foreground group-hover:text-premium-emerald transition-colors">{achievement.title}</h3>
       </a>
     </div>
   );
