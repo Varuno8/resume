@@ -72,43 +72,59 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
       <div className="relative h-48 overflow-hidden group/video">
         {project.video ? (
           <div className="w-full h-full bg-black relative">
-            <video
-              id={`video-${project.id}`}
-              src={project.video}
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{
-                transform: isHovered ? 'scale(1.1) translateZ(20px)' : 'scale(1)',
-                transformStyle: 'preserve-3d',
-                transition: 'transform 0.7s ease-out'
-              }}
-            />
+            {project.video.includes('drive.google.com') ? (
+              <iframe
+                id={`video-${project.id}`}
+                src={project.video.replace('/view?usp=sharing', '/preview').replace('/view', '/preview')}
+                className="w-full h-full object-cover pointer-events-auto"
+                allow="autoplay; fullscreen"
+                style={{
+                  transform: isHovered ? 'scale(1.1) translateZ(20px)' : 'scale(1)',
+                  transformStyle: 'preserve-3d',
+                  transition: 'transform 0.7s ease-out'
+                }}
+              />
+            ) : (
+              <video
+                id={`video-${project.id}`}
+                src={project.video}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  transform: isHovered ? 'scale(1.1) translateZ(20px)' : 'scale(1)',
+                  transformStyle: 'preserve-3d',
+                  transition: 'transform 0.7s ease-out'
+                }}
+              />
+            )}
+
             {/* Fullscreen Button */}
             <button
               className="absolute top-2 right-2 p-1.5 bg-black/60 rounded-full text-white opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 z-30 hover:bg-black/80"
               onClick={(e) => {
                 e.stopPropagation();
-                const videoElement = document.getElementById(`video-${project.id}`) as HTMLVideoElement;
-                if (videoElement) {
-                  if (videoElement.requestFullscreen) {
-                    videoElement.requestFullscreen();
-                  } else if ((videoElement as any).webkitRequestFullscreen) {
-                    (videoElement as any).webkitRequestFullscreen();
-                  } else if ((videoElement as any).msRequestFullscreen) {
-                    (videoElement as any).msRequestFullscreen();
+                const element = document.getElementById(`video-${project.id}`);
+                if (element) {
+                  if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                  } else if ((element as any).webkitRequestFullscreen) {
+                    (element as any).webkitRequestFullscreen();
+                  } else if ((element as any).msRequestFullscreen) {
+                    (element as any).msRequestFullscreen();
                   }
                 }
               }}
+              title="View Fullscreen"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
             </button>
 
-            {/* TV Screen Effects */}
+            {/* TV Screen Effects - Pointer events none ensures clicks go through to iframe/video */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] z-20 bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20"></div>
             <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-20 pointer-events-none z-10"></div>
           </div>

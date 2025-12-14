@@ -19,7 +19,7 @@ export const projects: Project[] = [
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Viton+Virtual+Try-On",
     githubUrl: "https://github.com/",
     demoUrl: "https://viton-repo.vercel.app/",
-    video: "/site-demo.mov"
+    video: "/site-demo.mp4"
   },
   {
     id: 2,
