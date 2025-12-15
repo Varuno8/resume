@@ -34,7 +34,7 @@ export const projects: Project[] = [
     id: 3,
     title: "OCR & Text Analysis Tool",
     description: "Computer vision application that extracts and analyzes text from images and documents.",
-    technologies: ["Google Vision API", "OpenCV", "HuggingFace", "Flask", "React"],
+    technologies: ["OpenCV", "HuggingFace", "Flask", "React"],
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=OCR+Analysis+Tool",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/file/d/1Qw308EiVN0OMuQ0q1vvTgAgCuIXhLctP/view?usp=sharing",
