@@ -47,6 +47,7 @@ export const projects: Project[] = [
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=PDF+RAG+App",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/drive/folders/1rW2ufZNwpmeH1E4dX-JW1qkERoM-fH3P?usp=sharing",
+    video: "/pdf_recording.mov"
   },
   {
     id: 5,
