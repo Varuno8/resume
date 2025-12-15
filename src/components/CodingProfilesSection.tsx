@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import TechIcon from './projects/TechIcon';
@@ -19,8 +18,7 @@ const codingProfiles: CodingProfile[] = [
         username: "Varun_2",
         url: "https://leetcode.com/Varun_2/",
         iconName: "LeetCode",
-        rating: "1800+",
-        solved: "500+ Problems",
+        solved: "250+ Problems",
         description: "Consistent problem solver participating in weekly contests."
     },
     {
@@ -37,7 +35,7 @@ const codingProfiles: CodingProfile[] = [
         username: "Varun_o8",
         url: "https://codeforces.com/profile/Varun_o8",
         iconName: "CodeForces", // We might need to add this to TechIcon or use a fallback
-        rating: "Specialist",
+        rating: "Pupil",
         solved: "300+ Problems",
         description: "Solving algorithmic challenges and participating in rounds."
     },
@@ -47,7 +45,7 @@ const codingProfiles: CodingProfile[] = [
         url: "https://www.geeksforgeeks.org/profile/varun28y2a4?tab=activity",
         iconName: "GeeksforGeeks",
         rating: "Institute Rank 1",
-        solved: "800+ Problems",
+        solved: "300+ Problems",
         description: "Mastering data structures and algorithms concepts."
     }
 ];
