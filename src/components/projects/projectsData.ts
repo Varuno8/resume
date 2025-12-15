@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Mediscan AI",
     description: "AI-powered medical analysis platform featuring OCR for report digitization and a differential diagnosis decision support system for doctors.",
-    technologies: ["React", "Next.js", "OCR", "AI", "Decision Support System"],
+    technologies: ["React", "Next.js", "OCR", "AI", "RAG", "Decision Support System"],
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Mediscan+AI",
     githubUrl: "https://github.com/",
     demoUrl: "https://mediscan-ai-opal.vercel.app/",
