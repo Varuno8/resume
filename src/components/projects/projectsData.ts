@@ -38,6 +38,7 @@ export const projects: Project[] = [
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=OCR+Analysis+Tool",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/file/d/1Qw308EiVN0OMuQ0q1vvTgAgCuIXhLctP/view?usp=sharing",
+    video: "/textexctrator_recording.mov"
   },
   {
     id: 4,
