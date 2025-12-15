@@ -38,7 +38,7 @@ export const projects: Project[] = [
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=OCR+Analysis+Tool",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/file/d/1Qw308EiVN0OMuQ0q1vvTgAgCuIXhLctP/view?usp=sharing",
-    video: "/textexctrator_recording.mov"
+    video: "/textexctrator_recording.mp4"
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=PDF+RAG+App",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/drive/folders/1rW2ufZNwpmeH1E4dX-JW1qkERoM-fH3P?usp=sharing",
-    video: "/pdf_recording.mov"
+    video: "/pdf_recording.mp4"
   },
   {
     id: 5,
