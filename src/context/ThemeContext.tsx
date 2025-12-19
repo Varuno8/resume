@@ -10,30 +10,17 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>(() => {
-        // Check localStorage first, otherwise default to light
-        if (typeof window !== 'undefined') {
-            const stored = localStorage.getItem('theme') as Theme;
-            if (stored) return stored;
-            return 'dark';
-        }
-        return 'dark';
-    });
+    const [theme, setTheme] = useState<Theme>('dark');
 
     useEffect(() => {
         const root = document.documentElement;
-        if (theme === 'dark') {
-            root.classList.add('dark');
-            root.classList.remove('light');
-        } else {
-            root.classList.add('light');
-            root.classList.remove('dark');
-        }
-        localStorage.setItem('theme', theme);
-    }, [theme]);
+        root.classList.add('dark');
+        root.classList.remove('light');
+        localStorage.setItem('theme', 'dark');
+    }, []); // Run once on mount to force dark
 
     const toggleTheme = () => {
-        setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+        // Theme toggle disabled - enforced dark mode
     };
 
     return (

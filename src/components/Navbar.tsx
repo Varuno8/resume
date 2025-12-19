@@ -71,18 +71,7 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center space-x-3">
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-4 w-4 text-outdoors-rust" />
-              ) : (
-                <Moon className="h-4 w-4 text-outdoors-charcoal" />
-              )}
-            </button>
+
 
             {socialLinks.map((link) => (
               <a
@@ -112,17 +101,7 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center space-x-2">
           {/* Mobile Theme Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? (
-              <Sun className="h-5 w-5 text-outdoors-rust" />
-            ) : (
-              <Moon className="h-5 w-5 text-outdoors-charcoal" />
-            )}
-          </button>
+
 
           <button
             className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
