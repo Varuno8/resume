@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Briefcase, Calendar, Star, ArrowRight } from 'lucide-react';
+import { Mountain, Tent, TreePine, ArrowRight, MapPin } from 'lucide-react';
 
 interface Experience {
   id: number;
@@ -22,7 +22,7 @@ const experiences: Experience[] = [
       "Created secure subscription systems, analytics dashboards, and an AI model catalog",
       "Implemented JWT-based authentication with Google OAuth, Tailwind UI, and Recharts visualizations"
     ],
-    color: "#10b981" // emerald
+    color: "#2C5F2D" // forest
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const experiences: Experience[] = [
       "Developed responsive UI components and implemented state management patterns",
       "Collaborated with UX team to create intuitive user flows and interactions"
     ],
-    color: "#f59e0b" // amber
+    color: "#B7410E" // rust
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const experiences: Experience[] = [
       "Optimized web assets and implemented best practices for performance improvements",
       "Created cross-browser compatible solutions for client websites"
     ],
-    color: "#f8fafc" // white/slate-50
+    color: "#4A3728" // bark
   }
 ];
 
@@ -90,22 +90,61 @@ const ExperienceSection: React.FC = () => {
       <div className="container mx-auto">
         {/* Section title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Work <span className="premium-gradient-text">Experience</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
+            Act IV: The Bridge of <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Fossilization</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional journey and roles that have shaped my expertise.
+          <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide italic">
+            "The Burgess Shale of Technology: where extinct stacks fossilize into modern AI."
           </p>
         </div>
 
         {/* Timeline */}
         <div ref={timelineRef} className="max-w-4xl mx-auto relative">
-          {/* Timeline line with animated elements */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-premium-emerald via-premium-white to-premium-amber">
-            {/* Timeline Nodes */}
-            <div className="hidden md:block absolute top-[10%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-premium-emerald animate-pulse-slow shadow-glow-emerald"></div>
-            <div className="hidden md:block absolute top-[50%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-premium-amber animate-pulse-slow shadow-glow-amber"></div>
-            <div className="hidden md:block absolute top-[90%] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white animate-pulse-slow shadow-glow-white"></div>
+          {/* Timeline line as a River */}
+          {/* Timeline Nodes - River Bends */}
+          <div className="absolute left-0 top-0 bottom-0 w-full flex justify-center overflow-visible pointer-events-none z-0">
+            {/* Wavy River SVG */}
+            <svg className="h-full w-20 md:w-32" preserveAspectRatio="none" viewBox="0 0 100 800">
+              <path
+                d="M50,0 C80,200 20,400 50,800"
+                fill="none"
+                stroke="#60A5FA"
+                strokeWidth="8"
+                strokeOpacity="0.4"
+                strokeLinecap="round"
+                className="animate-pulse-slow"
+              />
+              <path
+                d="M50,0 C80,200 20,400 50,800"
+                fill="none"
+                stroke="#3B82F6"
+                strokeWidth="3"
+                strokeOpacity="0.6"
+                strokeDasharray="20,10"
+              />
+            </svg>
+
+
+            {/* Visual Bridge crossing the river */}
+          </div>
+
+          {/* FOSSIL BRIDGE visualization - Amber Layers */}
+          <div className="absolute top-[28%] left-0 w-full flex justify-center z-10 opacity-90 pointer-events-none">
+            <div className="relative w-[300px] h-[100px]">
+              {/* Layer 1: jQuery Ammonite (Bottom) */}
+              <div className="absolute bottom-0 w-full h-8 bg-amber-700/40 rounded-b-lg border-b-2 border-amber-900/50 backdrop-blur-sm"></div>
+              {/* Layer 2: REST API Vertebrae (Middle) */}
+              <div className="absolute bottom-6 w-[280px] left-[10px] h-8 bg-amber-600/40 border-b-2 border-amber-800/50 backdrop-blur-sm"></div>
+              {/* Layer 3: React Fern (Top) */}
+              <div className="absolute bottom-12 w-[260px] left-[20px] h-8 bg-amber-500/40 rounded-t-lg border-t-2 border-amber-400/30 backdrop-blur-sm"></div>
+
+              {/* Narrative Text */}
+              <div className="absolute -top-16 left-1/2 -translate-x-1/2 bg-texture-paper p-4 rounded-sm border border-outdoors-rust/60 shadow-2xl skew-x-[-5deg] w-64 text-center">
+                <p className="text-xs font-serif text-outdoors-charcoal italic leading-relaxed">
+                  "I didn't abandon the forge; I learned that every hammer strike was just pre-training for the weights I'd later tune."
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Experience cards */}
@@ -133,7 +172,7 @@ const ExperienceSection: React.FC = () => {
                 style={{
                   transformStyle: 'preserve-3d',
                   transform: 'perspective(1000px)',
-                  borderColor: `${experience.color}33`
+                  borderColor: `${experience.color}55`
                 }}
                 onMouseMove={(e) => {
                   const card = e.currentTarget;
@@ -142,9 +181,9 @@ const ExperienceSection: React.FC = () => {
                   const y = e.clientY - rect.top;
                   const centerX = rect.width / 2;
                   const centerY = rect.height / 2;
-                  const rotateX = ((y - centerY) / centerY) * -5;
-                  const rotateY = ((x - centerX) / centerX) * 5;
-                  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                  const rotateX = ((y - centerY) / centerY) * -2;
+                  const rotateY = ((x - centerX) / centerX) * 2;
+                  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
@@ -152,11 +191,10 @@ const ExperienceSection: React.FC = () => {
               >
                 <div className={`flex items-center mb-2 ${index % 2 === 0 ? 'md:justify-end' : ''
                   }`}>
-                  <Briefcase
-                    className={`h-5 w-5 mr-2 md:order-1`}
-                    style={{ color: experience.color }}
+                  <Mountain
+                    className={`h-6 w-6 mr-2 md:order-1 text-outdoors-forest`}
                   />
-                  <h3 className="font-display text-xl font-semibold">{experience.position}</h3>
+                  <h3 className="font-display text-xl font-bold bg-outdoors-rust/10 px-2 py-1 rounded inline-block text-outdoors-charcoal">{experience.position}</h3>
                 </div>
 
                 <h4
@@ -166,9 +204,9 @@ const ExperienceSection: React.FC = () => {
                   {experience.company}
                 </h4>
 
-                <div className={`flex items-center text-sm text-muted-foreground mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''
+                <div className={`flex items-center text-sm font-mono text-muted-foreground mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''
                   }`}>
-                  <Calendar className="h-4 w-4 mr-1" />
+                  <MapPin className="h-4 w-4 mr-1 text-outdoors-rust" />
                   <span>{experience.period}</span>
                 </div>
 
@@ -176,9 +214,8 @@ const ExperienceSection: React.FC = () => {
                   }`}>
                   {experiences[index].highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start">
-                      <Star
-                        className="h-4 w-4 mr-2 mt-1 shrink-0"
-                        style={{ color: experience.color }}
+                      <TreePine
+                        className="h-4 w-4 mr-2 mt-1 shrink-0 text-outdoors-forest"
                       />
                       <span>{highlight}</span>
                     </li>
@@ -199,17 +236,16 @@ const ExperienceSection: React.FC = () => {
           </p>
           <a
             href="#skills"
-            className="inline-flex items-center text-premium-emerald hover:underline"
+            className="inline-flex items-center text-outdoors-forest hover:text-outdoors-rust hover:underline transition-colors"
           >
-            Check out my skills
+            Check out my survival kit
             <ArrowRight className="ml-1 h-4 w-4" />
           </a>
         </div>
+        {/* Background elements */}
+        {/* <div className="absolute top-1/4 left-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div> */}
+        {/* <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-premium-amber/5 rounded-full filter blur-3xl"></div> */}
       </div>
-
-      {/* Background elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
     </section>
   );
 };

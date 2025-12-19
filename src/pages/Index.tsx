@@ -9,6 +9,7 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import ThreeDBackground from '@/components/ThreeDBackground';
+import NatureBackground from '@/components/NatureBackground';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index: React.FC = () => {
@@ -75,20 +76,20 @@ const Index: React.FC = () => {
     };
   }, [isMobile]);
 
-  return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden transition-colors duration-300">
-      <ParticlesBackground />
-      {showThreeD && !isMobile && <ThreeDBackground />}
-      <Navbar />
-      <HeroSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <CodingProfilesSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  );
+  return <div className="min-h-screen bg-transparent text-foreground overflow-x-hidden transition-colors duration-300">
+    <NatureBackground />
+
+    {/* <ParticlesBackground /> - Disabled for outdoors theme */}
+    {/* {showThreeD && !isMobile && <ThreeDBackground />} - Disabled for outdoors theme */}
+    <Navbar />
+    <HeroSection />
+    <ProjectsSection />
+    <ExperienceSection />
+    <SkillsSection />
+    <CodingProfilesSection />
+    <ContactSection />
+    <Footer />
+  </div>;
 };
 
 export default Index;

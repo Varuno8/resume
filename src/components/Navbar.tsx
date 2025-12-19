@@ -42,26 +42,28 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-dark/80 dark:bg-dark/80 light:bg-white/80 backdrop-blur-lg py-3 shadow-md'
-        : 'bg-transparent py-5'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-outdoors-rust/20 ${isScrolled
+        ? 'bg-texture-paper shadow-md py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       <nav className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo/Name */}
-        <a href="#home" className="font-display text-xl font-bold premium-gradient-text">
-          VT
+        {/* Logo/Name */}
+        <a href="#home" className="font-display text-2xl font-bold text-outdoors-rust tracking-widest uppercase border-2 border-outdoors-rust p-1 px-3 rounded-sm rotate-1 hover:rotate-0 transition-transform bg-texture-paper">
+          V. Tyagi
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
             {navLinks.map((link) => (
-              <li key={link.name}>
+              <li key={link.name} className="relative group">
                 <a
                   href={link.href}
-                  className="text-sm hover:text-premium-emerald transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-premium-emerald hover:after:w-full after:transition-all"
+                  className="font-display text-sm tracking-wider uppercase text-foreground hover:text-outdoors-rust transition-colors flex items-center gap-1"
                 >
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity text-outdoors-rust">➤</span>
                   {link.name}
                 </a>
               </li>
@@ -76,9 +78,9 @@ const Navbar = () => {
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="h-4 w-4 text-premium-amber" />
+                <Sun className="h-4 w-4 text-outdoors-rust" />
               ) : (
-                <Moon className="h-4 w-4 text-slate-700" />
+                <Moon className="h-4 w-4 text-outdoors-charcoal" />
               )}
             </button>
 
@@ -98,10 +100,10 @@ const Navbar = () => {
             <Button
               variant="default"
               size="sm"
-              className="bg-premium-emerald text-white hover:bg-premium-emerald/90"
+              className="bg-outdoors-forest hover:bg-outdoors-rust text-white font-display uppercase tracking-widest border border-outdoors-bark shadow-sm"
               onClick={handleResumeClick}
             >
-              <Download className="h-4 w-4 mr-1" />
+              <Download className="h-4 w-4 mr-2" />
               Resume
             </Button>
           </div>
@@ -116,9 +118,9 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? (
-              <Sun className="h-5 w-5 text-premium-amber" />
+              <Sun className="h-5 w-5 text-outdoors-rust" />
             ) : (
-              <Moon className="h-5 w-5 text-slate-700" />
+              <Moon className="h-5 w-5 text-outdoors-charcoal" />
             )}
           </button>
 

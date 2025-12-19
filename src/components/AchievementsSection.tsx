@@ -11,11 +11,11 @@ const AchievementsSection: React.FC = () => {
       <div className="container mx-auto">
         {/* Section title */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            My <span className="premium-gradient-text">Achievements</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
+            Field <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Honors</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Recognition and accomplishments throughout my journey.
+          <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
+            Recognition received from the wilderness.
           </p>
         </div>
 
@@ -38,8 +38,9 @@ const AchievementsSection: React.FC = () => {
       </div>
 
       {/* Background elements */}
-      <div className="absolute -bottom-20 right-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div>
-      <div className="absolute -top-20 left-0 w-96 h-96 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
+      {/* Background elements - Removed neon blobs */}
+      {/* <div className="absolute -bottom-20 right-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div> */}
+      {/* <div className="absolute -top-20 left-0 w-96 h-96 bg-devops-orange/5 rounded-full filter blur-3xl"></div> */}
     </section>
   );
 };

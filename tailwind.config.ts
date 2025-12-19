@@ -20,8 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Space Grotesk', 'sans-serif'],
+				sans: ['Montserrat', 'sans-serif'],
+				display: ['Special Elite', 'cursive'],
+				body: ['Special Elite', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -69,11 +70,18 @@ export default {
 				},
 				// Custom premium colors - Distinct from generic AI themes
 				premium: {
-					slate: '#0f172a', // Slate 900
-					emerald: '#10b981', // Emerald 500
-					amber: '#f59e0b',   // Amber 500
-					white: '#f8fafc',   // Slate 50
+					slate: '#0f172a', // Keep for utility if needed
+					emerald: '#10b981', // Keep for utility if needed
+					amber: '#f59e0b',   // Keep for utility if needed
+					white: '#f8fafc',   // Keep for utility if needed
 				},
+				outdoors: {
+					forest: '#2C5F2D',
+					rust: '#B7410E',
+					charcoal: '#36454F',
+					canvas: '#F4F1EA',
+					bark: '#4A3728',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

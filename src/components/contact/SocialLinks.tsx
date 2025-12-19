@@ -31,7 +31,7 @@ const SocialLinks: React.FC = () => {
       name: 'Email',
       icon: <Mail className="h-6 w-6" />,
       url: 'mailto:varun28082001@gmail.com',
-      color: 'bg-premium-emerald hover:bg-premium-emerald/90',
+      color: 'bg-outdoors-rust hover:bg-outdoors-rust/90',
       username: 'varun28082001@gmail.com'
     },
   ];
@@ -77,10 +77,10 @@ const SocialLinks: React.FC = () => {
         {/* Resume Download Button */}
         <Button
           onClick={handleResumeClick}
-          className="w-full bg-premium-emerald hover:bg-premium-emerald/90 text-white flex items-center justify-center shadow-lg shadow-premium-emerald/20"
+          className="w-full bg-outdoors-forest hover:bg-outdoors-bark text-white flex items-center justify-center shadow-md border border-outdoors-bark font-display uppercase tracking-widest"
         >
           <Download className="mr-2 h-5 w-5" />
-          Download Resume
+          Download Log
         </Button>
       </div>
     </div>

@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
     const heading = headingRef.current;
     heading.style.opacity = '1';
 
-    const text = 'Building AI-Powered Web Experiences';
+    const text = 'Excavating the Fossil Record of Intelligence';
     const typingSpeed = 80;
 
     let charIndex = 0;
@@ -47,39 +47,37 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 z-10 mt-16 sm:mt-20">
         <div className="max-w-3xl mx-auto text-center">
           {/* Profile image with glow effect */}
+          {/* Profile image with vintage border */}
           <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-premium-emerald via-premium-white to-premium-amber opacity-30 blur-md animate-pulse-slow"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-dashed border-outdoors-rust opacity-50 animate-spin-slow" style={{ animationDuration: '20s' }}></div>
             <img
-              src="https://placehold.co/300x300/0f172a/FFFFFF?text=VT"
+              src="https://placehold.co/300x300/F4F1EA/36454F?text=VT"
               alt="Profile"
-              className="w-full h-full object-cover rounded-full border-2 border-white/20"
+              className="w-full h-full object-cover rounded-full border-4 border-outdoors-bark sepia-[.3]"
             />
           </div>
 
-          {/* Pre-heading text with animated fade-in */}
-          <p className="text-premium-emerald font-mono mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            Hello, I'm
+          {/* Pre-heading text - Act I Title */}
+          <p className="text-outdoors-rust font-display mb-2 sm:mb-3 opacity-0 animate-fade-in tracking-widest uppercase text-sm" style={{ animationDelay: '0.5s' }}>
+            Act I: The Primordial Code
           </p>
 
-          {/* Name with gradient and 3D effect */}
-          <h1 className="font-display text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-in relative" style={{ animationDelay: '0.7s' }}>
-            <span className="premium-gradient-text relative z-10 leading-tight tracking-tight">Varun Tyagi</span>
-            {/* Text shadow for 3D effect */}
-            <span className="absolute -left-1 top-1 text-white/5 z-0 hidden md:block">Varun Tyagi</span>
+          {/* Name with vintage stamped effect */}
+          <h1 className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold mb-4 sm:mb-6 opacity-0 animate-fade-in relative text-outdoors-forest tracking-tighter" style={{ animationDelay: '0.7s' }}>
+            Varun Tyagi
           </h1>
 
-          {/* Professional title badge */}
-          <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4 sm:mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <span className="h-2 w-2 rounded-full bg-premium-amber mr-2 animate-pulse"></span>
-            <span className="text-premium-emerald text-sm sm:text-base font-medium">Full-Stack Developer</span>
+          {/* Professional title badge as a field note tag */}
+          <div className="inline-flex items-center px-4 py-2 bg-outdoors-rust/10 border-l-4 border-outdoors-rust mb-6 opacity-0 animate-fade-in shadow-sm cursor-help hover:bg-outdoors-rust/20 transition-colors" title="I am the synthesis of symbolic rigor and statistical flight." style={{ animationDelay: '0.9s' }}>
+            <span className="text-outdoors-charcoal text-sm sm:text-base font-bold font-sans tracking-wide uppercase">Archaeologist of Intelligence</span>
           </div>
 
           {/* Tagline with typing effect - improved sizing for mobile */}
           <h2
             ref={headingRef}
-            className="text-xl sm:text-2xl md:text-3xl font-display mb-6 sm:mb-8 opacity-0 h-[32px] sm:h-[40px] md:h-[48px] font-semibold"
+            className="text-xl sm:text-2xl md:text-3xl font-display mb-6 sm:mb-8 opacity-0 h-[32px] sm:h-[40px] md:h-[48px] font-semibold text-outdoors-forest"
           >
-            Building AI-Powered Web Experiences
+            Excavating the Fossil Record of Intelligence
           </h2>
 
           {/* Subtext with improved professional tone and wrapping on mobile */}
@@ -88,12 +86,12 @@ const HeroSection: React.FC = () => {
             immersive digital experiences with modern technologies and best practices.
           </p>
 
-          {/* CTA Buttons with enhanced styling - mobile-friendly layout */}
+          {/* CTA Buttons with rustic styling */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-5 opacity-0 animate-fade-in" style={{ animationDelay: '1.6s' }}>
             <Button
               variant="default"
               size={isMobile ? "default" : "lg"}
-              className="group w-full sm:w-auto bg-premium-emerald text-white hover:bg-premium-emerald/90 transition-all duration-300 shadow-lg shadow-premium-emerald/20"
+              className="group w-full sm:w-auto bg-outdoors-rust text-white hover:bg-outdoors-bark transition-all duration-300 rounded-sm border-2 border-transparent shadow-md font-display uppercase tracking-widest"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Projects
@@ -103,7 +101,7 @@ const HeroSection: React.FC = () => {
             <Button
               variant="outline"
               size={isMobile ? "default" : "lg"}
-              className="group w-full sm:w-auto border-white/10 hover:bg-white/5 text-foreground transition-all duration-300"
+              className="group w-full sm:w-auto border-2 border-outdoors-forest text-outdoors-forest hover:bg-outdoors-forest hover:text-white transition-all duration-300 rounded-sm font-display uppercase tracking-widest bg-transparent"
               onClick={handleResumeClick}
             >
               Download Resume
@@ -146,8 +144,8 @@ const HeroSection: React.FC = () => {
           <div className="absolute bottom-8 sm:bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '2s' }}>
             <div className="flex flex-col items-center">
               <div className="relative h-12 sm:h-16 w-1">
-                <div className="absolute w-[3px] h-12 sm:h-16 rounded-full bg-gradient-to-b from-premium-emerald to-transparent"></div>
-                <div className="absolute w-[3px] h-4 sm:h-5 bg-premium-emerald rounded-full animate-bounce-slow"></div>
+                <div className="absolute w-[2px] h-12 sm:h-16 bg-outdoors-charcoal/30"></div>
+                <div className="absolute w-[2px] h-4 sm:h-5 bg-outdoors-rust animate-bounce-slow"></div>
               </div>
             </div>
           </div>

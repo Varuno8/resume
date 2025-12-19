@@ -75,26 +75,17 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
 
   return (
     <div
-      className="glass-card rounded-xl p-6 text-center transition-all duration-300 hover:shadow-xl hover:shadow-premium-emerald/10 border border-white/5"
+      className="bg-texture-paper rounded-full h-auto aspect-square flex flex-col items-center justify-center p-6 text-center transition-all duration-300 hover:scale-105 shadow-md border-4 border-dashed border-outdoors-rust/40 relative overflow-hidden"
       style={{
         transformStyle: 'preserve-3d',
         transform: 'perspective(1000px)',
       }}
       onMouseMove={(e) => {
-        const card = e.currentTarget;
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        // Reduced movement for better UX
       }}
     >
+      {/* Fabric texture overlay */}
+      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
       <a
         href={achievement.url}
         target="_blank"
@@ -102,36 +93,30 @@ const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, index })
         className={achievement.url ? "block group" : "group"}
       >
         <div
-          className={`h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110 ${achievement.color === 'premium-amber'
-              ? 'bg-premium-amber/20 text-premium-amber shadow-premium-amber/20'
-              : 'bg-premium-emerald/20 text-premium-emerald shadow-premium-emerald/20'
-            }`}
+          className={`h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-outdoors-forest/10 text-outdoors-forest border-2 border-outdoors-forest ring-4 ring-outdoors-forest/20`}
         >
           {renderIcon()}
         </div>
 
-        <div className="mb-2">
+        <div className="mb-2 relative z-10">
           <span
             ref={counterRef}
-            className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
-              }`}
+            className={`text-2xl font-display font-bold text-outdoors-charcoal`}
             data-target={achievement.numericValue}
           >
             0
           </span>
-          <span className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
-            }`}>
+          <span className={`text-2xl font-display font-bold text-outdoors-charcoal`}>
             {achievement.value.includes('+') ? '+' : achievement.value.includes('%') ? '%' : ''}
           </span>
           {achievement.id === 4 &&
-            <span className={`text-3xl font-display font-bold ${achievement.color === 'premium-amber' ? 'text-premium-amber' : 'text-premium-emerald'
-              }`}>
+            <span className={`text-xl font-display font-medium text-outdoors-rust block`}>
               {' percentile'}
             </span>
           }
         </div>
 
-        <h3 className="text-lg font-medium text-foreground group-hover:text-premium-emerald transition-colors">{achievement.title}</h3>
+        <h3 className="text-sm font-bold uppercase tracking-widest text-outdoors-rust group-hover:underline">{achievement.title}</h3>
       </a>
     </div>
   );

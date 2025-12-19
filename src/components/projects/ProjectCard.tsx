@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
   return (
     <div
       ref={cardRef}
-      className={`glass-card rounded-xl overflow-hidden transition-all duration-500 ${isHovered ? 'border-premium-emerald/50 z-10' : ''
+      className={`bg-texture-paper rounded-sm overflow-hidden transition-all duration-500 border border-outdoors-bark/30 shadow-md ${isHovered ? 'border-outdoors-rust shadow-xl z-10' : ''
         }`}
       onMouseEnter={onHover}
       onMouseLeave={() => { }}
@@ -124,9 +124,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
               </svg>
             </button>
 
-            {/* TV Screen Effects - Pointer events none ensures clicks go through to iframe/video */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] z-20 bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20"></div>
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-20 pointer-events-none z-10"></div>
+            {/* TV Screen Effects - Removed, replaced with vintage overlay */}
+            <div className="absolute inset-0 bg-outdoors-bark/10 pointer-events-none z-20 mix-blend-multiply"></div>
+            <div className="absolute inset-0 border-b-4 border-outdoors-rust/50 pointer-events-none z-30"></div>
           </div>
         ) : (
           <>
@@ -145,14 +145,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
       </div>
 
       {/* Project content with 3D layering */}
-      <div className="p-6" style={{ transform: isHovered ? 'translateZ(30px)' : 'translateZ(0)', transformStyle: 'preserve-3d' }}>
-        <h3 className="text-xl font-display font-semibold mb-2">{project.title}</h3>
+      <div className="p-6 bg-texture-paper" style={{ transform: isHovered ? 'translateZ(30px)' : 'translateZ(0)', transformStyle: 'preserve-3d' }}>
+        <h3 className="text-xl font-display font-bold mb-2 text-outdoors-forest">{project.title}</h3>
         <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-6" style={{ transform: isHovered ? 'translateZ(40px)' : 'translateZ(0)', transformStyle: 'preserve-3d' }}>
           {project.technologies.map((tech, index) => (
-            <Badge key={index} variant="outline" className="bg-white/5 flex items-center">
+            <Badge key={index} variant="outline" className="bg-outdoors-rust/5 border-outdoors-rust/30 text-outdoors-charcoal flex items-center font-mono text-xs">
               <TechIcon tech={tech} />
               <span className="ml-1">{tech}</span>
             </Badge>
@@ -183,11 +183,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
           <Button
             variant="ghost"
             size="sm"
-            className="group text-premium-emerald hover:text-premium-emerald hover:bg-premium-emerald/10"
+            className="group text-outdoors-rust hover:text-white hover:bg-outdoors-rust font-display uppercase tracking-wider"
             style={{ transform: isHovered ? 'translateZ(60px)' : 'translateZ(0)', transformStyle: 'preserve-3d' }}
             onClick={() => window.open(project.demoUrl, '_blank')}
           >
-            View Details
+            Details
             <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

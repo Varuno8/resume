@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, PawPrint, Footprints } from 'lucide-react';
 import TechIcon from './projects/TechIcon';
 
 interface CodingProfile {
@@ -56,93 +56,49 @@ const CodingProfilesSection: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6">
                 {/* Section title */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                        Coding <span className="premium-gradient-text">Profiles</span>
+                    <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
+                        Coding <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Journey</span>
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        My competitive programming journey and problem-solving statistics across various platforms.
+                    <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
+                        My problem-solving expedition log and competitive achievements.
                     </p>
                 </div>
 
-                {/* Desktop Grid View */}
-                <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {codingProfiles.map((profile, index) => (
                         <a
                             key={profile.name}
                             href={profile.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative p-6 rounded-xl bg-card border border-white/5 hover:border-premium-emerald/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-emerald flex flex-col items-center text-center"
+                            className="group relative p-6 rounded-sm bg-texture-paper border-2 border-outdoors-bark/20 hover:border-outdoors-rust transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-b from-premium-emerald/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                            <div className="relative mb-4 p-3 rounded-full bg-background border border-white/10 group-hover:border-premium-emerald/50 transition-colors">
-                                <TechIcon tech={profile.iconName} className="w-10 h-10 text-premium-emerald" />
+                            {/* "Tape" effect */}
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-outdoors-rust/20 rotate-1"></div>
+
+                            <div className="relative mb-4 p-3 rounded-full bg-outdoors-rust/10 border border-outdoors-rust/30 group-hover:bg-outdoors-rust/20 transition-colors">
+                                <TechIcon tech={profile.iconName} className="w-10 h-10 text-outdoors-rust" />
                             </div>
-                            <h3 className="text-xl font-bold mb-1 group-hover:text-premium-emerald transition-colors">{profile.name}</h3>
-                            <p className="text-sm text-muted-foreground mb-4">@{profile.username}</p>
-                            <div className="w-full space-y-2 mb-6">
+                            <h3 className="text-xl font-bold mb-1 text-outdoors-forest font-display">{profile.name}</h3>
+                            <p className="text-sm text-muted-foreground mb-4 font-mono">@{profile.username}</p>
+                            <div className="w-full space-y-2 mb-6 border-t border-b border-dashed border-outdoors-bark/20 py-4">
                                 {profile.rating && (
                                     <div className="flex justify-between items-center text-sm">
-                                        <span className="text-muted-foreground">Rating</span>
-                                        <span className="font-mono text-premium-amber">{profile.rating}</span>
+                                        <span className="text-muted-foreground font-display uppercase text-xs">Rating</span>
+                                        <span className="font-bold text-outdoors-rust">{profile.rating}</span>
                                     </div>
                                 )}
                                 {profile.solved && (
                                     <div className="flex justify-between items-center text-sm">
-                                        <span className="text-muted-foreground">Solved</span>
-                                        <span className="font-mono text-premium-emerald">{profile.solved}</span>
+                                        <span className="text-muted-foreground font-display uppercase text-xs">Solved</span>
+                                        <span className="font-bold text-outdoors-forest">{profile.solved}</span>
                                     </div>
                                 )}
                             </div>
-                            <p className="text-sm text-muted-foreground mb-6 flex-grow">{profile.description}</p>
-                            <div className="mt-auto flex items-center text-sm font-medium text-premium-emerald opacity-80 group-hover:opacity-100 transition-opacity">
-                                View Profile <ExternalLink className="ml-1 h-3 w-3" />
-                            </div>
-                        </a>
-                    ))}
-                </div>
-
-                {/* Mobile Horizontal Scroll View */}
-                <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 -mx-4 px-4 scrollbar-hide">
-                    {codingProfiles.map((profile, index) => (
-                        <a
-                            key={profile.name}
-                            href={profile.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="snap-center flex-shrink-0 w-[85vw] p-5 rounded-2xl bg-gradient-to-br from-card to-background border border-white/10 backdrop-blur-md flex flex-col items-center text-center shadow-lg shadow-black/20 relative overflow-hidden"
-                        >
-                            {/* Decorative gradient blob */}
-                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-premium-emerald/10 rounded-full blur-2xl"></div>
-                            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-premium-amber/10 rounded-full blur-2xl"></div>
-
-                            <div className="relative mb-3 p-3 rounded-full bg-background/80 border border-white/10 shadow-inner">
-                                <TechIcon tech={profile.iconName} className="w-10 h-10 text-premium-emerald" />
-                            </div>
-
-                            <h3 className="text-xl font-bold mb-1 text-foreground">{profile.name}</h3>
-                            <p className="text-sm text-muted-foreground mb-4">@{profile.username}</p>
-
-                            <div className="w-full bg-black/20 rounded-lg p-3 mb-4 backdrop-blur-sm border border-white/5">
-                                {profile.rating && (
-                                    <div className="flex justify-between items-center text-sm mb-2">
-                                        <span className="text-muted-foreground">Rating</span>
-                                        <span className="font-mono text-premium-amber font-bold">{profile.rating}</span>
-                                    </div>
-                                )}
-                                {profile.solved && (
-                                    <div className="flex justify-between items-center text-sm">
-                                        <span className="text-muted-foreground">Solved</span>
-                                        <span className="font-mono text-premium-emerald font-bold">{profile.solved}</span>
-                                    </div>
-                                )}
-                            </div>
-
-                            <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">{profile.description}</p>
-
-                            <div className="mt-auto w-full py-2 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sm font-medium text-premium-emerald">
-                                View Profile <ExternalLink className="ml-2 h-3 w-3" />
+                            <p className="text-sm text-muted-foreground mb-6 flex-grow font-serif italic">{profile.description}</p>
+                            <div className="mt-auto flex items-center text-sm font-bold text-outdoors-rust uppercase tracking-wider group-hover:underline decoration-2 underline-offset-4">
+                                View Log <ExternalLink className="ml-1 h-3 w-3" />
                             </div>
                         </a>
                     ))}
@@ -150,8 +106,21 @@ const CodingProfilesSection: React.FC = () => {
             </div>
 
             {/* Background elements */}
-            <div className="absolute -bottom-20 right-0 w-96 h-96 bg-premium-emerald/5 rounded-full filter blur-3xl"></div>
-            <div className="absolute -top-20 left-0 w-96 h-96 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
+            {/* Background elements - Animal Tracks */}
+            <div className="absolute bottom-10 right-10 opacity-[0.03] rotate-12 pointer-events-none">
+                <div className="flex flex-col space-y-12">
+                    <PawPrint size={40} className="text-outdoors-rust ml-12" />
+                    <PawPrint size={40} className="text-outdoors-rust" />
+                    <PawPrint size={40} className="text-outdoors-rust ml-12" />
+                </div>
+            </div>
+
+            <div className="absolute top-20 left-10 opacity-[0.03] -rotate-12 pointer-events-none">
+                <div className="flex flex-col space-y-16">
+                    <Footprints size={50} className="text-outdoors-forest" />
+                    <Footprints size={50} className="text-outdoors-forest ml-8" />
+                </div>
+            </div>
         </section>
     );
 };

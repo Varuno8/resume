@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Rat } from 'lucide-react'; // Using Rat as Beaver proxy or similar
 import ProjectCard from './projects/ProjectCard';
 import { projects } from './projects/projectsData';
 
@@ -46,12 +46,20 @@ const ProjectsSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Featured <span className="premium-gradient-text">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
+            Field <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Work</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Explore my recent work spanning web development, AI integration, and data processing.
+          <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
+            A specialized collection of technical expeditions and developed systems.
           </p>
+        </div>
+
+        {/* Beaver/Builder Theme Element */}
+        <div className="flex justify-center mb-8 opacity-70">
+          <div className="flex items-center space-x-2 text-outdoors-rust bg-outdoors-rust/10 px-4 py-2 rounded-full border border-outdoors-rust/20">
+            <Rat className="h-5 w-5" />
+            <span className="text-sm font-mono font-bold uppercase tracking-widest">Construction Zone • Dam Building</span>
+          </div>
         </div>
 
         {/* Project cards with better spacing on mobile */}
@@ -74,9 +82,9 @@ const ProjectsSection: React.FC = () => {
               onClick={handleLoadMore}
               variant="outline"
               size="lg"
-              className="border-premium-emerald text-premium-emerald hover:bg-premium-emerald/10"
+              className="border-2 border-outdoors-rust text-outdoors-rust hover:bg-outdoors-rust hover:text-white font-display uppercase tracking-widest rounded-sm"
             >
-              Load More Projects
+              Load More Expeditions
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -84,8 +92,9 @@ const ProjectsSection: React.FC = () => {
       </div>
 
       {/* Background glow effects */}
-      <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-premium-emerald/10 rounded-full filter blur-3xl"></div>
-      <div className="absolute top-1/3 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-premium-amber/5 rounded-full filter blur-3xl"></div>
+      {/* Background glow effects - Removed for clean paper look */}
+      {/* <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-premium-emerald/10 rounded-full filter blur-3xl"></div> */}
+      {/* <div className="absolute top-1/3 right-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-premium-amber/5 rounded-full filter blur-3xl"></div> */}
     </section>
   );
 };

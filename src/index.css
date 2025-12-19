@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Special+Elite&display=swap');
+
+@layer utilities {
+  .bg-texture-paper {
+    background-color: hsl(var(--background));
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+}
 
 @tailwind base;
 @tailwind components;
@@ -6,50 +13,51 @@
 
 @layer base {
   :root {
-    /* Deep Rich Background */
-    --background: 222 47% 4%;
-    /* Almost black slate */
-    --foreground: 210 40% 98%;
+    /* Outdoorsman Theme - Rich Earth Tones */
+    /* Dark Green/Charcoal mix for background */
+    --background: 155 19% 13%;
+    /* Canvas/Paper for text */
+    --foreground: 42 27% 94%;
 
-    --card: 222 47% 6%;
-    --card-foreground: 210 40% 98%;
+    --card: 155 19% 16%;
+    --card-foreground: 42 27% 94%;
 
-    --popover: 222 47% 5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 155 19% 13%;
+    --popover-foreground: 42 27% 94%;
 
-    /* Emerald Primary - Fresh & Cool */
-    --primary: 153 60% 53%;
-    /* Emerald 500ish, very fresh */
-    --primary-foreground: 222 47% 4%;
+    /* Rust - Primary Action Color */
+    --primary: 18 80% 39%;
+    --primary-foreground: 42 27% 94%;
 
-    --secondary: 217.2 32.6% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 97 36% 27%;
+    /* Forest Green */
+    --secondary-foreground: 42 27% 94%;
 
-    --muted: 217.2 32.6% 12%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 155 10% 20%;
+    --muted-foreground: 42 15% 70%;
 
-    /* Amber Accent - Warm Contrast */
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 4%;
+    /* Golden/Amber Accent */
+    --accent: 35 90% 50%;
+    --accent-foreground: 155 19% 13%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 42 27% 94%;
 
-    --border: 217.2 32.6% 15%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 153 60% 53%;
-    /* Ring matches Primary */
+    --border: 97 20% 25%;
+    --input: 155 19% 20%;
+    --ring: 18 80% 39%;
 
-    --radius: 0.8rem;
+    --radius: 0.3rem;
+    /* Less rounded, more rugged */
 
-    --sidebar-background: 222 47% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 153 60% 53%;
-    --sidebar-primary-foreground: 222 47% 4%;
-    --sidebar-accent: 217.2 32.6% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 15%;
-    --sidebar-ring: 153 60% 53%;
+    --sidebar-background: 155 19% 10%;
+    --sidebar-foreground: 42 27% 94%;
+    --sidebar-primary: 18 80% 39%;
+    --sidebar-primary-foreground: 42 27% 94%;
+    --sidebar-accent: 97 36% 27%;
+    --sidebar-accent-foreground: 42 27% 94%;
+    --sidebar-border: 97 20% 25%;
+    --sidebar-ring: 18 80% 39%;
   }
 
   .light {
@@ -96,11 +104,11 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-premium-emerald selection:bg-opacity-30 selection:text-white;
+    @apply border-border selection:bg-outdoors-rust selection:bg-opacity-30 selection:text-white;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-texture-paper text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
@@ -111,11 +119,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-card/60 backdrop-blur-xl border border-white/5 shadow-xl transition-colors duration-300;
+    @apply bg-card/60 backdrop-blur-xl border border-white/5 shadow-xl transition-colors duration-300 rounded-sm;
   }
 
   .premium-gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-premium-emerald to-premium-amber;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-outdoors-rust via-outdoors-forest to-outdoors-bark;
   }
 
   .glass-border {
@@ -129,7 +137,7 @@
   }
 
   .skill-tag {
-    @apply px-3 py-1 rounded-full text-sm bg-secondary border border-border backdrop-blur-sm hover:bg-premium-emerald/20 transition-all duration-300;
+    @apply px-3 py-1 rounded-sm text-sm bg-outdoors-forest/10 border border-outdoors-forest/30 text-outdoors-charcoal backdrop-blur-sm hover:bg-outdoors-forest/20 transition-all duration-300 font-mono;
   }
 
   /* Typing cursor animation */
@@ -368,15 +376,15 @@
 
   /* Professional shadow styles */
   .shadow-glow-emerald {
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 15px rgba(44, 95, 45, 0.4);
   }
 
   .shadow-glow-amber {
-    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 15px rgba(183, 65, 14, 0.4);
   }
 
   .shadow-glow-white {
-    box-shadow: 0 0 15px rgba(248, 250, 252, 0.3);
+    box-shadow: 0 0 15px rgba(244, 241, 234, 0.3);
   }
 
   /* Utility aliases for backward compatibility if needed, or just replacements */

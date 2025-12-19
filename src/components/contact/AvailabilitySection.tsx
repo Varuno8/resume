@@ -17,7 +17,7 @@ const AvailabilitySection: React.FC = () => {
       <h3 className="font-display text-lg font-medium mt-6 mb-3">Get In Touch</h3>
       <a
         href="https://mail.google.com/mail/?view=cm&fs=1&to=varun28082001@gmail.com&su=Hello"
-        className="text-premium-emerald hover:underline block mb-3"
+        className="text-outdoors-rust hover:underline block mb-3 font-mono"
         target="_blank"
         rel="noopener noreferrer"
       >

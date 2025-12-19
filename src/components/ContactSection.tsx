@@ -14,11 +14,11 @@ const ContactSection: React.FC = () => {
       <div className="container mx-auto">
         {/* Section title */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Let's <span className="premium-gradient-text">Build Together</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
+            Plan a <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Journey</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto px-4">
-            Have a project in mind or want to collaborate? Reach out and let's create something amazing.
+          <p className="text-muted-foreground max-w-2xl mx-auto px-4 font-display tracking-wide">
+            Ready to start a new adventure? Send a signal and let's map out the route.
           </p>
         </div>
 

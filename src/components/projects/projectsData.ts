@@ -13,78 +13,78 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Viton - Virtual Try-On",
-    description: "A virtual try-on application allowing users to visualize clothes on themselves using AI.",
+    title: "Viton: The Chameleon",
+    description: "Like a chameleon changing its colors, this 'Virtual Try-On' AI adapts clothing to any user instantly using Stable Diffusion.",
     technologies: ["React", "AI", "Stable Diffusion"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Viton+Virtual+Try-On",
     githubUrl: "https://github.com/",
     demoUrl: "https://viton-repo.vercel.app/",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Viton+Chameleon",
     video: "/site-demo.mp4"
   },
   {
     id: 2,
-    title: "Text to Image Generator",
-    description: "An AI application that generates images from text prompts using Stable Diffusion entirely locally, without relying on external APIs.",
+    title: "Text-to-Image: The Artist Spider",
+    description: "Weaving complex visual webs from simple text threads. A local generative AI model that spins pixel-perfect images without external dependencies.",
     technologies: ["Stable Diffusion", "Python", "PyTorch", "Streamlit"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Text+to+Image",
     githubUrl: "https://github.com/",
     demoUrl: "https://github.com/",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=The+Artist+Spider",
     video: "/text_to_image.mp4"
   },
   {
     id: 3,
-    title: "OCR & Text Analysis Tool",
-    description: "Computer vision application that extracts and analyzes text from images and documents.",
+    title: "OCR Tool: The Hawk's Eye",
+    description: "Possessing the vision of a predator, this Computer Vision tool scans documents to extract and analyze hidden text with pinpoint accuracy.",
     technologies: ["OpenCV", "HuggingFace", "Flask", "Streamlit"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=OCR+Analysis+Tool",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/file/d/1Qw308EiVN0OMuQ0q1vvTgAgCuIXhLctP/view?usp=sharing",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Hawks+Eye+OCR",
     video: "/textexctrator_recording.mp4"
   },
   {
     id: 4,
-    title: "PDF-based RAG Application",
-    description: "An intelligent document Q&A system using retrieval augmented generation techniques.",
+    title: "PDF RAG: The Elephant's Memory",
+    description: "An intelligent retrieval system that never forgets. It ingests massive PDF knowledge bases and recalls specific facts instantly.",
     technologies: ["LangChain", "Streamlit", "FAISS", "Ollama", "Python"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=PDF+RAG+App",
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/drive/folders/1rW2ufZNwpmeH1E4dX-JW1qkERoM-fH3P?usp=sharing",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Elephants+Memory+RAG",
     video: "/pdf_recording.mp4"
   },
   {
     id: 5,
-    title: "Mediscan AI",
-    description: "AI-powered medical analysis platform featuring OCR for report digitization and a differential diagnosis decision support system for doctors.",
+    title: "Mediscan AI: The Alpha Wolf",
+    description: "Leading the pack in diagnosis. A decision support system that coordinates OCR and differential diagnosis to guide doctors through complex medical terrain.",
     technologies: ["React", "Next.js", "OCR", "AI", "RAG", "Decision Support System"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Mediscan+AI",
     githubUrl: "https://github.com/",
     demoUrl: "https://mediscan-ai-opal.vercel.app/",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Mediscan+Alpha+Wolf"
   },
   {
     id: 6,
-    title: "QuickCart E-commerce App",
-    description: "A modern e-commerce platform with authentication, payment processing, and order management.",
+    title: "QuickCart: The Ant Colony",
+    description: "A highly organized e-commerce infrastructure handling thousands of interactions (orders, payments) with collective efficiency.",
     technologies: ["Next.js", "Clerk", "MongoDB", "Inngest", "Tailwind CSS"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=QuickCart+App",
     githubUrl: "https://github.com/",
     demoUrl: "https://littlewisewesbite-ten.vercel.app/",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=QuickCart+Ant+Colony"
   },
   {
     id: 7,
-    title: "Jobify - Job Seeking App",
-    description: "A comprehensive platform for job seekers to find and apply for opportunities.",
+    title: "Jobify: The Migration Path",
+    description: "Helping the herd find greener pastures. A comprehensive platform connecting job seekers to new opportunities across the digital landscape.",
     technologies: ["React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Jobify",
     githubUrl: "https://github.com/",
     demoUrl: "https://jobify-j55w.onrender.com/dashboard/profile",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Jobify+Migration"
   },
   {
     id: 8,
-    title: "VitalCarePlatform",
-    description: "A healthcare SaaS platform connecting users to AI-powered medical services through subscriptions.",
+    title: "VitalCare: The Life Support",
+    description: "A symbiotic ecosystem connecting patients to AI services, ensuring vital health data flows securely through the system.",
     technologies: ["React", "Next.js", "PostgreSQL", "JWT", "REST API", "Tailwind CSS"],
-    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=VitalCarePlatform",
     githubUrl: "https://github.com/",
     demoUrl: "https://nextjs-login-sooty.vercel.app/",
+    image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=VitalCare+Ecosystem"
   }
 ];

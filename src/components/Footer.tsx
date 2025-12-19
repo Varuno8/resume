@@ -27,13 +27,21 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="pt-16 pb-8 bg-card transition-colors duration-300 relative">
+    <footer className="pt-24 pb-8 bg-outdoors-charcoal text-outdoors-canvas relative mt-16">
+
+      {/* Mountain Silhouette Top Border */}
+      <div className="absolute top-0 left-0 w-full h-16 -mt-16 overflow-hidden leading-none rotate-180">
+        <svg className="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="fill-outdoors-charcoal"></path>
+        </svg>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6">
         {/* Back to top button */}
         <div className="flex justify-center mb-8 sm:mb-12">
           <button
             onClick={handleScrollToTop}
-            className="p-3 rounded-full bg-premium-emerald text-white hover:bg-premium-emerald/90 transition-all hover:scale-110 shadow-lg shadow-premium-emerald/30"
+            className="p-3 rounded-full bg-outdoors-rust text-white hover:bg-outdoors-bark transition-all hover:scale-110 shadow-lg border-2 border-outdoors-canvas/20"
             aria-label="Back to top"
           >
             <ArrowUp className="h-5 w-5" />
@@ -43,10 +51,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Logo/Brand */}
           <div>
-            <h2 className="font-display text-2xl font-bold premium-gradient-text mb-4">Varun Tyagi</h2>
-            <p className="text-muted-foreground mb-6">
-              Full-stack engineer focused on building scalable software, intelligent systems,
-              and delightful user experiences.
+            <h2 className="font-display text-2xl font-bold text-white mb-4 uppercase tracking-widest">Varun Tyagi</h2>
+            <p className="text-outdoors-canvas/70 mb-6 font-serif italic">
+              Exploring the frontiers of code and creativity.
+              Let's chart the unknown.
             </p>
 
             {/* Social links - Updated with better visibility */}
@@ -58,7 +66,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="p-2 rounded-full bg-white/5 text-premium-emerald hover:bg-premium-emerald/10 transition-colors border border-white/5"
+                  className="p-2 rounded-full bg-white/10 text-outdoors-rust hover:bg-white/20 transition-colors border border-white/10"
                 >
                   {link.icon}
                 </a>
