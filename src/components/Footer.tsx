@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-premium-emerald transition-colors"
+                    className="text-muted-foreground hover:text-outdoors-rust transition-colors"
                   >
                     {link.name}
                   </a>

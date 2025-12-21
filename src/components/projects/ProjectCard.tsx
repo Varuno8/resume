@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!cardRef.current) return;
+      if (!cardRef.current || window.innerWidth < 768) return;
 
       const rect = cardRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;

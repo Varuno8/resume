@@ -122,7 +122,7 @@ const Navbar = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-base hover:text-premium-emerald transition-colors"
+                    className="text-base hover:text-outdoors-rust transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
@@ -148,7 +148,7 @@ const Navbar = () => {
               <Button
                 variant="default"
                 size="sm"
-                className="bg-premium-emerald text-white ml-auto"
+                className="bg-outdoors-forest hover:bg-outdoors-rust text-white ml-auto"
                 onClick={handleResumeClick}
               >
                 <Download className="h-4 w-4 mr-1" />

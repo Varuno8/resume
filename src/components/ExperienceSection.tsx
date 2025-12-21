@@ -102,9 +102,9 @@ const ExperienceSection: React.FC = () => {
         <div ref={timelineRef} className="max-w-4xl mx-auto relative">
           {/* Timeline line as a River */}
           {/* Timeline Nodes - River Bends */}
-          <div className="absolute left-0 top-0 bottom-0 w-full flex justify-center overflow-visible pointer-events-none z-0">
+          <div className="absolute left-0 top-0 bottom-0 w-full flex justify-start md:justify-center pl-4 md:pl-0 overflow-visible pointer-events-none z-0">
             {/* Wavy River SVG */}
-            <svg className="h-full w-20 md:w-32" preserveAspectRatio="none" viewBox="0 0 100 800">
+            <svg className="h-full w-20 md:w-32 opacity-70 md:opacity-100" preserveAspectRatio="none" viewBox="0 0 100 800">
               <path
                 d="M50,0 C80,200 20,400 50,800"
                 fill="none"
@@ -128,24 +128,6 @@ const ExperienceSection: React.FC = () => {
             {/* Visual Bridge crossing the river */}
           </div>
 
-          {/* FOSSIL BRIDGE visualization - Amber Layers */}
-          <div className="absolute top-[28%] left-0 w-full flex justify-center z-10 opacity-90 pointer-events-none">
-            <div className="relative w-[300px] h-[100px]">
-              {/* Layer 1: jQuery Ammonite (Bottom) */}
-              <div className="absolute bottom-0 w-full h-8 bg-amber-700/40 rounded-b-lg border-b-2 border-amber-900/50 backdrop-blur-sm"></div>
-              {/* Layer 2: REST API Vertebrae (Middle) */}
-              <div className="absolute bottom-6 w-[280px] left-[10px] h-8 bg-amber-600/40 border-b-2 border-amber-800/50 backdrop-blur-sm"></div>
-              {/* Layer 3: React Fern (Top) */}
-              <div className="absolute bottom-12 w-[260px] left-[20px] h-8 bg-amber-500/40 rounded-t-lg border-t-2 border-amber-400/30 backdrop-blur-sm"></div>
-
-              {/* Narrative Text */}
-              <div className="absolute -top-16 left-1/2 -translate-x-1/2 bg-texture-paper p-4 rounded-sm border border-outdoors-rust/60 shadow-2xl skew-x-[-5deg] w-64 text-center">
-                <p className="text-xs font-serif text-outdoors-charcoal italic leading-relaxed">
-                  "I didn't abandon the forge; I learned that every hammer strike was just pre-training for the weights I'd later tune."
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Experience cards */}
           {experiences.map((experience, index) => (
@@ -154,9 +136,9 @@ const ExperienceSection: React.FC = () => {
               className="experience-card mb-12 md:mb-24 relative grid grid-cols-1 md:grid-cols-2 gap-8"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              {/* Timeline dot with glow effect */}
+              {/* Timeline dot with glow effect - Responsive positioning */}
               <div
-                className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+                className="absolute left-[2.5rem] md:left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full z-10 top-6 md:top-6 border-2 border-white"
                 style={{
                   backgroundColor: experience.color,
                   boxShadow: `0 0 15px ${experience.color}`,
@@ -165,9 +147,9 @@ const ExperienceSection: React.FC = () => {
 
               {/* Content with 3D hover effect */}
               <div
-                className={`glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg ${index % 2 === 0
-                  ? 'md:col-start-1 md:text-right'
-                  : 'md:col-start-2'
+                className={`glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg ml-16 md:ml-0 ${index % 2 === 0
+                  ? 'md:col-start-1 md:text-right md:mr-8 lg:mr-12'
+                  : 'md:col-start-2 md:ml-8 lg:ml-12'
                   }`}
                 style={{
                   transformStyle: 'preserve-3d',
@@ -175,6 +157,7 @@ const ExperienceSection: React.FC = () => {
                   borderColor: `${experience.color}55`
                 }}
                 onMouseMove={(e) => {
+                  if (window.innerWidth < 768) return; // Disable 3D tilt on mobile
                   const card = e.currentTarget;
                   const rect = card.getBoundingClientRect();
                   const x = e.clientX - rect.left;
@@ -189,10 +172,10 @@ const ExperienceSection: React.FC = () => {
                   e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
                 }}
               >
-                <div className={`flex items-center mb-2 ${index % 2 === 0 ? 'md:justify-end' : ''
+                <div className={`flex items-center mb-2 md:justify-start ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}>
                   <Mountain
-                    className={`h-6 w-6 mr-2 md:order-1 text-outdoors-forest`}
+                    className={`h-6 w-6 text-outdoors-forest ${index % 2 === 0 ? 'mr-2 md:mr-0 md:ml-2' : 'mr-2'}`}
                   />
                   <h3 className="font-display text-xl font-bold bg-outdoors-rust/10 px-2 py-1 rounded inline-block text-outdoors-charcoal">{experience.position}</h3>
                 </div>
@@ -204,18 +187,18 @@ const ExperienceSection: React.FC = () => {
                   {experience.company}
                 </h4>
 
-                <div className={`flex items-center text-sm font-mono text-muted-foreground mb-4 ${index % 2 === 0 ? 'md:justify-end' : ''
+                <div className={`flex items-center text-sm font-mono text-muted-foreground mb-4 md:justify-start ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}>
-                  <MapPin className="h-4 w-4 mr-1 text-outdoors-rust" />
+                  <MapPin className={`h-4 w-4 text-outdoors-rust ${index % 2 === 0 ? 'mr-1 md:mr-0 md:ml-1' : 'mr-1'}`} />
                   <span>{experience.period}</span>
                 </div>
 
                 <ul className={`space-y-2 text-muted-foreground ${index % 2 === 0 ? 'md:ml-auto' : ''
                   }`}>
                   {experiences[index].highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start">
+                    <li key={i} className={`flex items-start ${index % 2 === 0 ? 'md:flex-row-reverse md:text-right' : ''}`}>
                       <TreePine
-                        className="h-4 w-4 mr-2 mt-1 shrink-0 text-outdoors-forest"
+                        className={`h-4 w-4 mt-1 shrink-0 text-outdoors-forest ${index % 2 === 0 ? 'mr-2 md:mr-0 md:ml-2' : 'mr-2'}`}
                       />
                       <span>{highlight}</span>
                     </li>
