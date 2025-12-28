@@ -21,6 +21,7 @@ import CompassNav from "./components/CompassNav";
 import PageTransition from "./components/PageTransition";
 import AmbientSoundscape from "./components/AmbientSoundscape";
 import NatureBackground from "./components/NatureBackground";
+import LatestProjectPopup from "./components/LatestProjectPopup";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <LatestProjectPopup />
             <div className="flex bg-transparent overflow-hidden min-h-screen relative">
               {/* Global Technical Overlays */}
               <div className="fixed inset-0 pointer-events-none z-[1] bg-blueprint-grid opacity-20" />

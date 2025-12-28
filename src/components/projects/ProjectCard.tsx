@@ -56,6 +56,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
     };
   }, [isHovered]);
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (project.video === '/site-demo.mp4' && videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.volume = 1.0;
+    }
+  }, [project.video]);
+
+
   return (
     <div
       ref={cardRef}
@@ -86,11 +96,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isHovered, onHover }
               />
             ) : (
               <video
+                ref={videoRef}
                 id={`video-${project.id}`}
                 src={project.video}
                 className="w-full h-full object-cover"
                 autoPlay
-                muted
+                muted={project.video !== '/site-demo.mp4'}
+                controls={project.video === '/site-demo.mp4'}
                 loop
                 playsInline
                 style={{

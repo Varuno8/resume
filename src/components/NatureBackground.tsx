@@ -58,7 +58,7 @@ const NatureBackground: React.FC = () => {
             {ecosystem.animals.map((animal) => (
                 <div
                     key={animal.id}
-                    className="absolute transition-all duration-[30s]"
+                    className="absolute transition-all duration-[30000ms]"
                     style={{ left: `${animal.position.x}%`, bottom: `${animal.position.y}px` }}
                 >
                     {animal.type === 'rabbit' ? (
