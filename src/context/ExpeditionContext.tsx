@@ -14,6 +14,8 @@ interface ExpeditionContextType {
     ecosystem: EcosystemState;
     isAudioPlaying: boolean;
     setAudioPlaying: (playing: boolean) => void;
+    isPopupOpen: boolean;
+    setPopupOpen: (open: boolean) => void;
     updateAnimalPosition: (id: string, x: number, y: number) => void;
 }
 
@@ -21,7 +23,8 @@ const ExpeditionContext = createContext<ExpeditionContextType | undefined>(undef
 
 export const ExpeditionProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [timeOfDay, setTimeOfDay] = useState<'dawn' | 'day' | 'dusk' | 'night'>('day');
-    const [isAudioPlaying, setAudioPlaying] = useState(false);
+    const [isAudioPlaying, setAudioPlaying] = useState(true);
+    const [isPopupOpen, setPopupOpen] = useState(false);
     const [ecosystem, setEcosystem] = useState<EcosystemState>(() => {
         const saved = sessionStorage.getItem('expedition-ecosystem');
         return saved ? JSON.parse(saved) : {
@@ -83,6 +86,8 @@ export const ExpeditionProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             ecosystem,
             isAudioPlaying,
             setAudioPlaying,
+            isPopupOpen,
+            setPopupOpen,
             updateAnimalPosition
         }}>
             {children}

@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { X, ArrowRight, Volume2, VolumeX, Maximize } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { useExpedition } from '@/context/ExpeditionContext';
 
 const LatestProjectPopup = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,11 @@ const LatestProjectPopup = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const navigate = useNavigate();
     const location = useLocation();
+    const { setPopupOpen } = useExpedition();
+
+    useEffect(() => {
+        setPopupOpen(isOpen);
+    }, [isOpen, setPopupOpen]);
 
     useEffect(() => {
         // Show popup every time we are on the home page ('/')
