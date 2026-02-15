@@ -1,33 +1,74 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float, MeshDistortMaterial, Sphere } from '@react-three/drei';
 import { ArrowRight, Github, Linkedin, Mail, Download, Globe, Signal, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import WebGLSafe from '@/components/WebGLSafe';
+
+// CSS-only fallback when WebGL is not available
+const CSSFallbackArtifact = () => (
+    <div className="w-full h-full flex items-center justify-center">
+        <div
+            style={{
+                width: '220px',
+                height: '220px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle at 30% 30%, #e8602c, #B7410E 50%, #7a2a08)',
+                boxShadow: '0 0 80px rgba(183, 65, 14, 0.4), inset 0 0 40px rgba(0,0,0,0.3)',
+                animation: 'floatOrb 4s ease-in-out infinite, pulseOrb 3s ease-in-out infinite alternate',
+            }}
+        />
+        <style>{`
+            @keyframes floatOrb {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-20px) scale(1.05); }
+            }
+            @keyframes pulseOrb {
+                0% { box-shadow: 0 0 80px rgba(183, 65, 14, 0.4), inset 0 0 40px rgba(0,0,0,0.3); }
+                100% { box-shadow: 0 0 120px rgba(183, 65, 14, 0.6), inset 0 0 60px rgba(0,0,0,0.2); }
+            }
+        `}</style>
+    </div>
+);
+
+// Lazy-load Three.js Canvas only when WebGL is available
+const ThreeCanvas = React.lazy(() =>
+    import('@react-three/fiber').then((mod) => {
+        const { Canvas } = mod;
+        return import('@react-three/drei').then((drei) => {
+            const { OrbitControls, Float, MeshDistortMaterial, Sphere } = drei;
+            const ThreeScene = () => (
+                <Canvas
+                    className="h-64 sm:h-96"
+                    gl={{ antialias: false, powerPreference: "low-power" }}
+                    dpr={[1, 1.5]}
+                >
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} />
+                    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
+                        <Sphere args={[1, 32, 32]} scale={1.5}>
+                            <MeshDistortMaterial
+                                color="#B7410E"
+                                attach="material"
+                                distort={0.4}
+                                speed={2}
+                                roughness={0.2}
+                            />
+                        </Sphere>
+                    </Float>
+                    <OrbitControls enableZoom={false} enableDamping />
+                </Canvas>
+            );
+            return { default: ThreeScene };
+        });
+    })
+);
 
 const ProfileArtifact = () => {
     return (
-        <Canvas
-            className="h-64 sm:h-96"
-            gl={{ antialias: false, powerPreference: "low-power" }}
-            dpr={[1, 1.5]}
-        >
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} />
-            <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-                <Sphere args={[1, 32, 32]} scale={1.5}>
-                    <MeshDistortMaterial
-                        color="#B7410E"
-                        attach="material"
-                        distort={0.4}
-                        speed={2}
-                        roughness={0.2}
-                    />
-                </Sphere>
-            </Float>
-            <OrbitControls enableZoom={false} enableDamping />
-        </Canvas>
+        <WebGLSafe fallback={<CSSFallbackArtifact />}>
+            <ThreeCanvas />
+        </WebGLSafe>
     );
 };
 

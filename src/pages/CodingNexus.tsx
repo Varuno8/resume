@@ -3,15 +3,18 @@ import { motion } from 'framer-motion';
 import { Terminal, Code, Trophy, Cpu, Zap, Activity, Target, Award } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { Float, Stars, Sparkles } from '@react-three/drei';
+import WebGLSafe from '@/components/WebGLSafe';
 
 const CodingBackground = () => (
     <div className="absolute inset-0 pointer-events-none opacity-20">
-        <Canvas>
-            <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-            <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
-                <Sparkles count={50} scale={10} size={4} speed={0.4} opacity={0.5} color="#B7410E" />
-            </Float>
-        </Canvas>
+        <WebGLSafe>
+            <Canvas>
+                <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+                <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
+                    <Sparkles count={50} scale={10} size={4} speed={0.4} opacity={0.5} color="#B7410E" />
+                </Float>
+            </Canvas>
+        </WebGLSafe>
     </div>
 );
 
