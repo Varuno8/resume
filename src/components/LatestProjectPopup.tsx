@@ -109,10 +109,10 @@ const LatestProjectPopup = () => {
                                 Just Released
                             </div>
                             <h2 className="text-3xl font-display font-bold text-outdoors-forest mb-2">
-                                Viton: The Chameleon
+                                Viton: Virtual Try-On
                             </h2>
                             <p className="text-muted-foreground mb-6">
-                                Experience our latest breakthrough in AI. A virtual try-on system that adapts clothing to any user instantly using Stable Diffusion.
+                                My latest AI project — a virtual try-on system that adapts clothing to any user instantly using Stable Diffusion.
                             </p>
 
                             <div className="flex items-center gap-4">

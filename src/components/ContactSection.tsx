@@ -15,10 +15,10 @@ const ContactSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
-            Plan a <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Journey</span>
+            Let's <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Connect</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto px-4 font-display tracking-wide">
-            Ready to start a new adventure? Send a signal and let's map out the route.
+            Have a project in mind or want to collaborate? Feel free to reach out.
           </p>
         </div>
 

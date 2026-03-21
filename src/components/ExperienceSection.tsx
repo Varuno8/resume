@@ -91,10 +91,10 @@ const ExperienceSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
-            Act IV: The Bridge of <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Fossilization</span>
+            Work <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide italic">
-            "The Burgess Shale of Technology: where extinct stacks fossilize into modern AI."
+            "A timeline of my professional roles and contributions in software engineering."
           </p>
         </div>
 
@@ -221,7 +221,7 @@ const ExperienceSection: React.FC = () => {
             href="#skills"
             className="inline-flex items-center text-outdoors-forest hover:text-outdoors-rust hover:underline transition-colors"
           >
-            Check out my survival kit
+            Check out my skills
             <ArrowRight className="ml-1 h-4 w-4" />
           </a>
         </div>

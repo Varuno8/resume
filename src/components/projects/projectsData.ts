@@ -13,8 +13,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Viton: The Chameleon",
-    description: "Like a chameleon changing its colors, this 'Virtual Try-On' AI adapts clothing to any user instantly using Stable Diffusion.",
+    title: "Viton: Virtual Try-On",
+    description: "An AI-powered virtual try-on system that adapts clothing to any user instantly using Stable Diffusion.",
     technologies: ["React", "AI", "Stable Diffusion"],
     githubUrl: "https://github.com/",
     demoUrl: "https://viton-repo.vercel.app/",
@@ -23,8 +23,8 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Text-to-Image: The Artist Spider",
-    description: "Weaving complex visual webs from simple text threads. A local generative AI model that spins pixel-perfect images without external dependencies.",
+    title: "Text-to-Image Generator",
+    description: "A locally-hosted generative AI model that creates high-quality images from text prompts without external API dependencies.",
     technologies: ["Stable Diffusion", "Python", "PyTorch", "Streamlit"],
     githubUrl: "https://github.com/",
     demoUrl: "https://github.com/",
@@ -33,8 +33,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "OCR Tool: The Hawk's Eye",
-    description: "Possessing the vision of a predator, this Computer Vision tool scans documents to extract and analyze hidden text with pinpoint accuracy.",
+    title: "OCR Document Scanner",
+    description: "A Computer Vision tool that scans documents to extract and analyze text with high accuracy using advanced OCR techniques.",
     technologies: ["OpenCV", "HuggingFace", "Flask", "Streamlit"],
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/file/d/1Qw308EiVN0OMuQ0q1vvTgAgCuIXhLctP/view?usp=sharing",
@@ -43,8 +43,8 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "PDF RAG: The Elephant's Memory",
-    description: "An intelligent retrieval system that never forgets. It ingests massive PDF knowledge bases and recalls specific facts instantly.",
+    title: "PDF RAG System",
+    description: "An intelligent retrieval-augmented generation system that processes large PDF documents and answers questions from them instantly.",
     technologies: ["LangChain", "Streamlit", "FAISS", "Ollama", "Python"],
     githubUrl: "https://github.com/",
     demoUrl: "https://drive.google.com/drive/folders/1rW2ufZNwpmeH1E4dX-JW1qkERoM-fH3P?usp=sharing",
@@ -53,8 +53,8 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Mediscan AI: The Alpha Wolf",
-    description: "Leading the pack in diagnosis. A decision support system that coordinates OCR and differential diagnosis to guide doctors through complex medical terrain.",
+    title: "Mediscan AI",
+    description: "A medical decision support system that uses OCR and AI to assist doctors with differential diagnosis from clinical documents.",
     technologies: ["React", "Next.js", "OCR", "AI", "RAG", "Decision Support System"],
     githubUrl: "https://github.com/",
     demoUrl: "https://mediscan-ai-opal.vercel.app/",
@@ -62,8 +62,8 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: "QuickCart: The Ant Colony",
-    description: "A highly organized e-commerce infrastructure handling thousands of interactions (orders, payments) with collective efficiency.",
+    title: "QuickCart E-Commerce",
+    description: "A full-featured e-commerce platform handling orders, payments, and user management with a scalable architecture.",
     technologies: ["Next.js", "Clerk", "MongoDB", "Inngest", "Tailwind CSS"],
     githubUrl: "https://github.com/",
     demoUrl: "https://littlewisewesbite-ten.vercel.app/",
@@ -71,8 +71,8 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Jobify: The Migration Path",
-    description: "Helping the herd find greener pastures. A comprehensive platform connecting job seekers to new opportunities across the digital landscape.",
+    title: "Jobify: Job Portal",
+    description: "A comprehensive job search platform connecting job seekers with opportunities, featuring profile management and application tracking.",
     technologies: ["React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
     githubUrl: "https://github.com/",
     demoUrl: "https://jobify-j55w.onrender.com/dashboard/profile",
@@ -80,8 +80,8 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    title: "VitalCare: The Life Support",
-    description: "A symbiotic ecosystem connecting patients to AI services, ensuring vital health data flows securely through the system.",
+    title: "VitalCare: Health Platform",
+    description: "A healthcare platform connecting patients to AI-powered services with secure health data management and user authentication.",
     technologies: ["React", "Next.js", "PostgreSQL", "JWT", "REST API", "Tailwind CSS"],
     githubUrl: "https://github.com/",
     demoUrl: "https://nextjs-login-sooty.vercel.app/",

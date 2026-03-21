@@ -60,9 +60,9 @@ const HydrologicalStation: React.FC = () => {
                     <Waves className="text-outdoors-rust" size={24} />
                     <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Professional Trajectory</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl">Act IV: Hydrological Station</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl">Work Experience</h1>
                 <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                    "Mapping the fluid progression of technical internships and production deployments."
+                    "My professional journey through technical internships and production deployments."
                 </p>
             </header>
 

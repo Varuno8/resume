@@ -105,7 +105,7 @@ const BaseCamp: React.FC = () => {
                         className="mb-6"
                     >
                         <span className="px-4 py-1.5 bg-outdoors-rust/20 border-l-4 border-outdoors-rust font-mono text-[10px] uppercase font-bold tracking-[0.3em] text-outdoors-rust">
-                            Mission Intelligence Active
+                            Open to Opportunities
                         </span>
                     </motion.div>
 
@@ -142,7 +142,7 @@ const BaseCamp: React.FC = () => {
                             onClick={() => navigate('/excavation?project=1')}
                             className="bg-outdoors-rust hover:bg-white hover:text-outdoors-rust text-white rounded-none h-14 px-8 font-display uppercase tracking-widest text-lg shadow-xl group border-b-4 border-black/40 active:translate-y-1 transition-all"
                         >
-                            Explore Artifacts <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            View Projects <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
                         <div className="relative group">
                             <Button
@@ -150,7 +150,7 @@ const BaseCamp: React.FC = () => {
                                 variant="outline"
                                 className="border-2 border-outdoors-canvas text-outdoors-canvas hover:bg-outdoors-canvas hover:text-outdoors-forest rounded-none h-14 px-8 font-display uppercase tracking-widest bg-transparent transition-all w-full sm:w-auto"
                             >
-                                Access Dossier <Download size={18} className="ml-2" />
+                                Download Resume <Download size={18} className="ml-2" />
                             </Button>
                             <div className="absolute top-full lg:left-0 left-1/2 lg:-translate-x-0 -translate-x-1/2 mt-2 w-max px-3 py-1 bg-black/80 text-white text-[10px] font-mono tracking-wider border border-white/20 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
                                 DOWNLOAD OFFICIAL RESUME
@@ -164,7 +164,7 @@ const BaseCamp: React.FC = () => {
                 <div className="bg-black/30 backdrop-blur-md p-8 border-l-[12px] border-outdoors-rust border-2 border-white/10 shadow-2xl relative overflow-hidden group">
                     <h2 className="font-display text-xl mb-6 text-outdoors-rust flex items-center gap-2">
                         <span className="h-1 w-8 bg-outdoors-canvas" />
-                        Operational Narrative
+                        About Me
                     </h2>
 
                     <p className="font-serif italic text-2xl text-outdoors-canvas leading-relaxed min-h-[140px]">

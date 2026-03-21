@@ -43,16 +43,16 @@ const SurvivalCompound: React.FC = () => {
                     <HammerIcon className="text-outdoors-rust" size={24} />
                     <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Technical Toolkit</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl text-outdoors-canvas">Act V: Survival Compound</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl text-outdoors-canvas">Technical Skills</h1>
                 <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                    "My arsenal for the digital wilderness—spanning advanced machine learning frameworks, full-stack stacks, and production infrastructure."
+                    "The technologies I work with — from machine learning frameworks to full-stack development and production infrastructure."
                 </p>
             </header>
 
             <div className="grid lg:grid-cols-12 gap-12 items-start mt-12">
                 <div className="lg:col-span-4 space-y-4">
                     <div className="bg-black/40 backdrop-blur-md p-6 text-white shadow-2xl skew-x-[-2deg] border border-white/10">
-                        <h3 className="font-display text-xl uppercase tracking-widest mb-6 border-b border-white/10 pb-2 text-outdoors-rust font-bold">Tool Selection</h3>
+                        <h3 className="font-display text-xl uppercase tracking-widest mb-6 border-b border-white/10 pb-2 text-outdoors-rust font-bold">Categories</h3>
                         <div className="space-y-3">
                             {skillCategories.map((cat) => (
                                 <button

@@ -61,11 +61,11 @@ const ExcavationGrid: React.FC = () => {
                 <div>
                     <div className="flex items-center gap-3 mb-2">
                         <Pickaxe className="text-outdoors-rust" size={24} />
-                        <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Technical Artifacts</span>
+                        <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">My Work</span>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas text-outdoors-canvas">Act III: Excavation Grid</h1>
+                    <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas text-outdoors-canvas">Projects</h1>
                     <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                        "Full archive of discovered engineering solutions, from generative AI to complex e-commerce ecosystems."
+                        "A complete collection of my engineering projects, from generative AI to full-stack applications."
                     </p>
                 </div>
             </header>
@@ -158,7 +158,7 @@ const ExcavationGrid: React.FC = () => {
                                             <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" />
                                         )}
                                         <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/60 font-mono text-[8px] text-outdoors-rust border border-outdoors-rust/30">
-                                            LIVE_CAPTURE_01
+                                            PREVIEW
                                         </div>
                                     </div>
                                 </div>
@@ -172,9 +172,9 @@ const ExcavationGrid: React.FC = () => {
                                     <div className="p-4 bg-white/5 border-l-4 border-outdoors-rust mt-auto">
                                         <div className="flex items-center gap-2 mb-2">
                                             <Cpu size={14} className="text-outdoors-rust" />
-                                            <span className="font-mono text-[10px] uppercase font-bold text-white/40 tracking-wider">Operational Status: Verified</span>
+                                            <span className="font-mono text-[10px] uppercase font-bold text-white/40 tracking-wider">Status: Live</span>
                                         </div>
-                                        <p className="text-[10px] font-mono text-white/30 italic">Detailed documentation and source available via secure uplink.</p>
+                                        <p className="text-[10px] font-mono text-white/30 italic">Full documentation and source code available on GitHub.</p>
                                     </div>
                                 </div>
                             </div>

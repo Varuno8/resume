@@ -49,11 +49,11 @@ const TransmissionRelay: React.FC = () => {
             <header className="mb-12 border-b-2 border-white/10 pb-6 relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                     <Radio className="text-outdoors-rust" size={24} />
-                    <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Global Uplink</span>
+                    <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Get in Touch</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl text-outdoors-canvas">Act VI: Transmission Relay</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl text-outdoors-canvas">Contact Me</h1>
                 <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                    "Establishing a stable frequency. Open for remote opportunities or on-site relocation as an AI / Full-Stack Engineer."
+                    "Open for remote opportunities or on-site relocation as an AI / Full-Stack Engineer."
                 </p>
             </header>
 
@@ -65,7 +65,7 @@ const TransmissionRelay: React.FC = () => {
                         <div className="relative z-10">
                             <h2 className="font-display text-2xl uppercase tracking-widest mb-8 flex items-center gap-3 text-outdoors-rust font-bold">
                                 <Signal className="text-outdoors-rust" />
-                                Broadcast Channels
+                                Contact Links
                             </h2>
 
                             <div className="space-y-6">
@@ -99,7 +99,7 @@ const TransmissionRelay: React.FC = () => {
                             <MapPin size={32} />
                         </div>
                         <div>
-                            <h4 className="font-display text-lg uppercase tracking-widest text-outdoors-canvas font-bold">Current Sector</h4>
+                            <h4 className="font-display text-lg uppercase tracking-widest text-outdoors-canvas font-bold">Location</h4>
                             <p className="font-mono text-xs text-white/40">New Delhi / India (Remote Available)</p>
                         </div>
                     </div>
@@ -107,25 +107,25 @@ const TransmissionRelay: React.FC = () => {
 
                 <div className="bg-black/30 backdrop-blur-lg border-2 border-white/10 shadow-2xl p-8 sm:p-12 relative overflow-hidden">
                     <h2 className="font-display text-2xl text-outdoors-rust mb-8 uppercase tracking-widest border-b border-white/10 pb-4 font-bold">
-                        Secure Transmission
+                        Send a Message
                     </h2>
 
                     <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
                         <div>
-                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Identify Subject</label>
+                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Your Name</label>
                             <Input className="bg-white/5 border border-white/10 focus:border-outdoors-rust rounded-none p-6 font-display text-outdoors-canvas placeholder:text-white/10 transition-all" placeholder="Your Name" />
                         </div>
                         <div>
-                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Return Frequency</label>
+                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Your Email</label>
                             <Input className="bg-white/5 border border-white/10 focus:border-outdoors-rust rounded-none p-6 font-display text-outdoors-canvas placeholder:text-white/10 transition-all" placeholder="email@example.com" />
                         </div>
                         <div>
-                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Message Payload</label>
+                            <label className="block font-mono text-[10px] uppercase font-bold text-white/40 mb-2 tracking-widest">Message</label>
                             <textarea className="w-full bg-white/5 border border-white/10 focus:border-outdoors-rust rounded-none p-6 font-display text-outdoors-canvas h-40 resize-none outline-none placeholder:text-white/10 transition-all" placeholder="What's on your mind?" />
                         </div>
 
                         <Button className="w-full bg-outdoors-rust hover:bg-white hover:text-outdoors-rust text-white font-display text-lg uppercase tracking-widest h-16 rounded-none shadow-xl transition-all active:scale-95 group border-b-4 border-black/40">
-                            {status === 'Transmitting...' ? 'Uplink Busy...' : 'Submit Transmission'}
+                            {status === 'Transmitting...' ? 'Sending...' : 'Send Message'}
                             <Send className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </Button>
                     </form>

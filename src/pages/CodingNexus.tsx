@@ -22,9 +22,9 @@ const profiles = [
     {
         id: 'leetcode',
         name: 'LeetCode',
-        alias: 'The Agile Leopard',
+        alias: 'Speed & Precision',
         stats: '250+ Solved',
-        description: 'Relentless problem-solving speed and precision. Dominated arrays, dynamic programming, and graph algorithms.',
+        description: 'Focused on arrays, dynamic programming, and graph algorithms with consistent contest participation.',
         rank: 'Top 15% Global',
         icon: <Code size={32} />,
         color: 'text-amber-500',
@@ -35,9 +35,9 @@ const profiles = [
     {
         id: 'gfg',
         name: 'GeeksforGeeks',
-        alias: 'The Wise Owl',
+        alias: 'Deep Fundamentals',
         stats: '350+ Solved',
-        description: 'Deep archive of fundamental knowledge. Mastered data structures and core algorithmic paradigms.',
+        description: 'Strong foundation in data structures and core algorithmic concepts. Institute Rank 1.',
         rank: 'Institute Rank 1',
         icon: <Terminal size={32} />,
         color: 'text-green-500',
@@ -48,9 +48,9 @@ const profiles = [
     {
         id: 'codeforces',
         name: 'CodeForces',
-        alias: 'The Combat Wolf',
+        alias: 'Competitive Coder',
         stats: 'Rank: Pupil',
-        description: 'Battle-hardened in high-pressure contests. solving complex problems under strict time constraints.',
+        description: 'Regular participant in timed contests, solving complex problems under strict time constraints.',
         rank: 'Max Rating: 1250',
         icon: <Trophy size={32} />,
         color: 'text-blue-500',
@@ -68,11 +68,11 @@ const CodingNexus: React.FC = () => {
             <header className="mb-12 border-b-2 border-white/10 pb-6 relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                     <Cpu className="text-outdoors-rust" size={24} />
-                    <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Algorithmic Mastery</span>
+                    <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Problem Solving</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl">Act VII: The Neural Sanctum</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas drop-shadow-2xl">Coding Profiles</h1>
                 <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                    "A dedicated arena for sharpening logic, refining efficiency, and battling complexity."
+                    "My competitive programming profiles and problem-solving stats across platforms."
                 </p>
             </header>
 
@@ -147,7 +147,7 @@ const CodingNexus: React.FC = () => {
             >
                 <Award className="text-outdoors-rust" />
                 <p className="font-display text-lg text-white/60">
-                    "Code is more than syntax; it is the modern survival instinct."
+                    "Consistent practice and competitive programming build strong engineering foundations."
                 </p>
             </motion.div>
         </div>

@@ -12,10 +12,10 @@ const AchievementsSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
-            Field <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Honors</span>
+            Awards & <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Achievements</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
-            Recognition received from the wilderness.
+            Certifications and recognitions earned along the way.
           </p>
         </div>
 

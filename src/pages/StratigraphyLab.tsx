@@ -56,9 +56,9 @@ const StratigraphyLab: React.FC = () => {
                     <Microscope className="text-outdoors-rust" size={24} />
                     <span className="font-mono text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Credentials & Foundations</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas">Act II: Stratigraphy Lab</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-outdoors-canvas">Education & Experience</h1>
                 <p className="mt-4 max-w-2xl text-outdoors-canvas/60 font-sans italic">
-                    "Analyzing the vertical timeline of engineering expertise, from NSUT to production-grade AI."
+                    "My academic background and professional journey, from NSUT to production-grade AI."
                 </p>
             </header>
 
@@ -114,7 +114,7 @@ const StratigraphyLab: React.FC = () => {
 
                                 <div className="space-y-6">
                                     <div className="bg-white/5 p-6 border-l-4 border-outdoors-rust">
-                                        <h4 className="font-display text-[10px] uppercase tracking-widest text-outdoors-rust mb-2 font-bold">Analysis Record</h4>
+                                        <h4 className="font-display text-[10px] uppercase tracking-widest text-outdoors-rust mb-2 font-bold">Details</h4>
                                         <p className="text-outdoors-canvas/80 leading-relaxed font-sans font-medium">
                                             {selectedLayer.details}
                                         </p>

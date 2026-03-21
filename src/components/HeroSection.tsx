@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
     const heading = headingRef.current;
     heading.style.opacity = '1';
 
-    const text = 'Excavating the Fossil Record of Intelligence';
+    const text = 'Building Intelligent Systems for the Real World';
     const typingSpeed = 80;
 
     let charIndex = 0;
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
 
           {/* Pre-heading text - Act I Title */}
           <p className="text-outdoors-rust font-display mb-2 sm:mb-3 opacity-0 animate-fade-in tracking-widest uppercase text-sm" style={{ animationDelay: '0.5s' }}>
-            Act I: The Primordial Code
+            Welcome to My Portfolio
           </p>
 
           {/* Name with vintage stamped effect */}
@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
 
           {/* Professional title badge as a field note tag */}
           <div className="inline-flex items-center px-4 py-2 bg-outdoors-rust/10 border-l-4 border-outdoors-rust mb-6 opacity-0 animate-fade-in shadow-sm cursor-help hover:bg-outdoors-rust/20 transition-colors" title="I am the synthesis of symbolic rigor and statistical flight." style={{ animationDelay: '0.9s' }}>
-            <span className="text-outdoors-charcoal text-sm sm:text-base font-bold font-sans tracking-wide uppercase">Archaeologist of Intelligence</span>
+            <span className="text-outdoors-charcoal text-sm sm:text-base font-bold font-sans tracking-wide uppercase">AI & Full-Stack Engineer</span>
           </div>
 
           {/* Tagline with typing effect - improved sizing for mobile */}
@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
             ref={headingRef}
             className="text-xl sm:text-2xl md:text-3xl font-display mb-6 sm:mb-8 opacity-0 h-[32px] sm:h-[40px] md:h-[48px] font-semibold text-outdoors-forest"
           >
-            Excavating the Fossil Record of Intelligence
+            Building Intelligent Systems for the Real World
           </h2>
 
           {/* Subtext with improved professional tone and wrapping on mobile */}

@@ -17,50 +17,50 @@ import {
 const locations = [
     {
         path: '/',
-        name: 'The Lion\'s Den',
-        subtitle: 'Home / Base Camp',
+        name: 'Home',
+        subtitle: 'Introduction',
         icon: <Tent size={20} />,
         color: 'text-amber-500'
     },
     {
         path: '/stratigraphy',
-        name: 'Owl\'s Watch',
-        subtitle: 'Education & Journey',
+        name: 'Education',
+        subtitle: 'Degrees & Credentials',
         icon: <Microscope size={20} />,
         color: 'text-blue-400'
     },
     {
         path: '/excavation?project=1',
-        name: 'Falcon\'s Dive',
-        subtitle: 'Projects & Work',
+        name: 'Projects',
+        subtitle: 'Featured Work',
         icon: <Skull size={20} />,
         color: 'text-outdoors-rust'
     },
     {
         path: '/hydrology',
-        name: 'Wolf\'s Path',
-        subtitle: 'Professional Exp.',
+        name: 'Experience',
+        subtitle: 'Work History',
         icon: <Waves size={20} />,
         color: 'text-cyan-400'
     },
     {
         path: '/survival',
-        name: 'Bear\'s Armory',
+        name: 'Skills',
         subtitle: 'Technical Skills',
         icon: <Compass size={20} />,
         color: 'text-emerald-400'
     },
     {
         path: '/coding',
-        name: 'Neural Sanctum',
+        name: 'Coding',
         subtitle: 'Coding Profiles',
         icon: <Trophy size={20} />,
         color: 'text-amber-500'
     },
     {
         path: '/transmission',
-        name: 'Eagle\'s Call',
-        subtitle: 'Contact & Links',
+        name: 'Contact',
+        subtitle: 'Get in Touch',
         icon: <Radio size={20} />,
         color: 'text-rose-400'
     },
@@ -112,7 +112,7 @@ const ExpeditionMap: React.FC = () => {
             {/* Main Navigation */}
             <nav className="relative flex-grow px-4 py-8 space-y-2 overflow-y-auto scrollbar-hide">
                 <div className="px-2 mb-4">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-white/20 font-bold">Expedition Sectors</span>
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-white/20 font-bold">Navigation</span>
                 </div>
 
                 {locations.map((loc) => (
@@ -159,7 +159,7 @@ const ExpeditionMap: React.FC = () => {
             {/* Coding Profiles / Ranking */}
             <div className="relative p-6 border-t border-white/5 bg-black/20">
                 <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-white/30 font-bold">Combat Rankings</span>
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-white/30 font-bold">Coding Stats</span>
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]" />
                 </div>
 

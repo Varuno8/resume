@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Compass as CompassIcon, X, Tent, Skull, Microscope, Waves, Radio, Code, Terminal, Trophy } from 'lucide-react';
 
 const locations = [
-    { path: '/', name: 'Base Camp', icon: <Tent size={18} /> },
-    { path: '/stratigraphy', name: 'Stratigraphy', icon: <Microscope size={18} /> },
-    { path: '/excavation?project=1', name: 'Excavation', icon: <Skull size={18} /> },
-    { path: '/hydrology', name: 'Hydrology', icon: <Waves size={18} /> },
-    { path: '/survival', name: 'Survival', icon: <CompassIcon size={18} /> },
-    { path: '/coding', name: 'Sanctum', icon: <Trophy size={18} /> },
+    { path: '/', name: 'Home', icon: <Tent size={18} /> },
+    { path: '/stratigraphy', name: 'Education', icon: <Microscope size={18} /> },
+    { path: '/excavation?project=1', name: 'Projects', icon: <Skull size={18} /> },
+    { path: '/hydrology', name: 'Experience', icon: <Waves size={18} /> },
+    { path: '/survival', name: 'Skills', icon: <CompassIcon size={18} /> },
+    { path: '/coding', name: 'Coding', icon: <Trophy size={18} /> },
     { path: '/transmission', name: 'Contact', icon: <Radio size={18} /> },
 ];
 
@@ -34,7 +34,7 @@ const CompassNav: React.FC = () => {
                     >
                         {/* Header */}
                         <div className="p-4 border-b border-white/5 bg-black/20">
-                            <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold">Expedition Log</span>
+                            <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold">Menu</span>
                         </div>
 
                         {/* Navigation Grid */}

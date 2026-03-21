@@ -47,10 +47,10 @@ const ProjectsSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
-            Field <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Work</span>
+            My <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
-            A specialized collection of technical expeditions and developed systems.
+            A collection of projects I've built using modern technologies.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const ProjectsSection: React.FC = () => {
         <div className="flex justify-center mb-8 opacity-70">
           <div className="flex items-center space-x-2 text-outdoors-rust bg-outdoors-rust/10 px-4 py-2 rounded-full border border-outdoors-rust/20">
             <Rat className="h-5 w-5" />
-            <span className="text-sm font-mono font-bold uppercase tracking-widest">Construction Zone • Dam Building</span>
+            <span className="text-sm font-mono font-bold uppercase tracking-widest">Featured Projects</span>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ const ProjectsSection: React.FC = () => {
               size="lg"
               className="border-2 border-outdoors-rust text-outdoors-rust hover:bg-outdoors-rust hover:text-white font-display uppercase tracking-widest rounded-sm"
             >
-              Load More Expeditions
+              Load More Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

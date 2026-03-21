@@ -22,12 +22,12 @@ const skillCategories: SkillCategory[] = [
     skills: ["Angular", "HTML", "CSS", "Bootstrap", "Express", "Node.js"]
   },
   {
-    name: "Campcraft", // Tools
+    name: "DevOps & Databases", // Tools
     icon: <Hammer className="h-6 w-6 text-outdoors-charcoal" />,
     skills: ["Git", "Docker", "MongoDB", "PostgreSQL", "MySQL"]
   },
   {
-    name: "Tracking", // AI / Intelligence / Navigation
+    name: "AI & ML", // AI / Intelligence / Navigation
     icon: <Compass className="h-6 w-6 text-outdoors-rust" />,
     skills: [
       "PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "SVM",
@@ -37,7 +37,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    name: "Weather", // Cloud
+    name: "Cloud", // Cloud
     icon: <CloudSun className="h-6 w-6 text-outdoors-forest" />,
     skills: ["AWS EC2", "S3", "Boto3"]
   }
@@ -128,10 +128,10 @@ const SkillsSection: React.FC = () => {
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-outdoors-forest">
-            Survival <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Kit</span>
+            Technical <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
-            Essential gear and skills for the digital wilderness.
+            Technologies and tools I use to build modern applications.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ const SkillsSection: React.FC = () => {
         <div className="flex justify-center mb-8 opacity-70">
           <div className="flex items-center space-x-2 text-outdoors-forest bg-outdoors-forest/10 px-4 py-2 rounded-full border border-outdoors-forest/20 animate-pulse-slow">
             <Bird className="h-5 w-5" />
-            <span className="text-sm font-mono font-bold uppercase tracking-widest">Owl's Wisdom • Knowledge Base</span>
+            <span className="text-sm font-mono font-bold uppercase tracking-widest">Core Competencies</span>
           </div>
         </div>
 
@@ -147,7 +147,7 @@ const SkillsSection: React.FC = () => {
           {/* Skills categories navigation - horizontal scrolling on mobile */}
           <div className="lg:col-span-1">
             <div className="bg-texture-paper rounded-sm p-4 sm:p-6 shadow-xl border-2 border-outdoors-bark/20">
-              <h3 className="text-xl font-display font-bold mb-3 sm:mb-4 text-outdoors-charcoal uppercase tracking-widest">Field Guide</h3>
+              <h3 className="text-xl font-display font-bold mb-3 sm:mb-4 text-outdoors-charcoal uppercase tracking-widest">Categories</h3>
               <div className="flex lg:flex-col space-x-2 lg:space-x-0 lg:space-y-3 overflow-x-auto pb-2 lg:pb-0">
                 {skillCategories.map((category) => (
                   <button

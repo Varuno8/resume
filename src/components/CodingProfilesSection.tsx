@@ -60,7 +60,7 @@ const CodingProfilesSection: React.FC = () => {
                         Coding <span className="text-outdoors-rust border-b-4 border-outdoors-rust/30">Journey</span>
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto font-display tracking-wide">
-                        My problem-solving expedition log and competitive achievements.
+                        My competitive programming profiles and problem-solving stats.
                     </p>
                 </div>
 
