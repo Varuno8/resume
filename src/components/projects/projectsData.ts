@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: "An AI-powered virtual try-on system that adapts clothing to any user instantly using Stable Diffusion.",
     technologies: ["React", "AI", "Stable Diffusion"],
     githubUrl: "https://github.com/",
-    demoUrl: "https://viton-repo.vercel.app/",
+    demoUrl: "https://tryown-frontend.vercel.app/",
     image: "https://placehold.co/600x400/1A1F2C/FFFFFF?text=Viton+Chameleon",
     video: "/site-demo.mp4"
   },
